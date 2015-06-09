@@ -34,7 +34,7 @@
 		03F3CCF71B2683CE003A6A4A /* ArtNumberToCapital.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F3CC791B2683CE003A6A4A /* ArtNumberToCapital.m */; };
 		03F3CCF81B2683CE003A6A4A /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 03F3CC7A1B2683CE003A6A4A /* NSData+Base64.h */; };
 		03F3CCF91B2683CE003A6A4A /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F3CC7B1B2683CE003A6A4A /* NSData+Base64.m */; };
-		03F3CCFA1B2683CE003A6A4A /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 03F3CC7C1B2683CE003A6A4A /* Utils.h */; };
+		03F3CCFA1B2683CE003A6A4A /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 03F3CC7C1B2683CE003A6A4A /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03F3CCFB1B2683CE003A6A4A /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F3CC7D1B2683CE003A6A4A /* Utils.m */; };
 		03F3CCFD1B2683CE003A6A4A /* SimpleTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 03F3CC801B2683CE003A6A4A /* SimpleTable.h */; };
 		03F3CCFE1B2683CE003A6A4A /* SimpleTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F3CC811B2683CE003A6A4A /* SimpleTable.m */; };
@@ -129,6 +129,9 @@
 		03F3CD691B268F4A003A6A4A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 03F3CD681B268F4A003A6A4A /* Images.xcassets */; };
 		03F3CD6C1B268F4A003A6A4A /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03F3CD6A1B268F4A003A6A4A /* LaunchScreen.xib */; };
 		03F3CD781B268F4A003A6A4A /* AOIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3CD771B268F4A003A6A4A /* AOIOSTests.swift */; };
+		03F3CD8A1B26CBD1003A6A4A /* NSObject+AOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 03F3CD881B26CBD1003A6A4A /* NSObject+AOCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03F3CD8B1B26CBD1003A6A4A /* NSObject+AOCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 03F3CD891B26CBD1003A6A4A /* NSObject+AOCocoa.m */; };
+		03F3CD9A1B26D779003A6A4A /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F3CD541B268D25003A6A4A /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -145,6 +148,13 @@
 			proxyType = 1;
 			remoteGlobalIDString = 03F3CD5A1B268F4A003A6A4A;
 			remoteInfo = AOIOS;
+		};
+		03F3CD951B26D6CD003A6A4A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03F3CC3A1B268365003A6A4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03F3CC421B268365003A6A4A;
+			remoteInfo = AOCocoa;
 		};
 /* End PBXContainerItemProxy section */
 
@@ -281,6 +291,9 @@
 		03F3CD711B268F4A003A6A4A /* AOIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F3CD761B268F4A003A6A4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03F3CD771B268F4A003A6A4A /* AOIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOIOSTests.swift; sourceTree = "<group>"; };
+		03F3CD881B26CBD1003A6A4A /* NSObject+AOCocoa.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+AOCocoa.h"; sourceTree = "<group>"; };
+		03F3CD891B26CBD1003A6A4A /* NSObject+AOCocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AOCocoa.m"; sourceTree = "<group>"; };
+		03F3CD8C1B26CF51003A6A4A /* AOIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AOIOS-Bridging-Header.h"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -304,6 +317,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F3CD9A1B26D779003A6A4A /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -423,6 +437,8 @@
 			children = (
 				03F3CC751B2683CE003A6A4A /* NSData+Base64.h */,
 				03F3CC761B2683CE003A6A4A /* NSData+Base64.m */,
+				03F3CD881B26CBD1003A6A4A /* NSObject+AOCocoa.h */,
+				03F3CD891B26CBD1003A6A4A /* NSObject+AOCocoa.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -619,6 +635,7 @@
 		03F3CD5C1B268F4A003A6A4A /* AOIOS */ = {
 			isa = PBXGroup;
 			children = (
+				03F3CD971B26D72E003A6A4A /* Library */,
 				03F3CD5F1B268F4A003A6A4A /* AppDelegate.swift */,
 				03F3CD611B268F4A003A6A4A /* MasterViewController.swift */,
 				03F3CD631B268F4A003A6A4A /* DetailViewController.swift */,
@@ -626,6 +643,7 @@
 				03F3CD681B268F4A003A6A4A /* Images.xcassets */,
 				03F3CD6A1B268F4A003A6A4A /* LaunchScreen.xib */,
 				03F3CD5D1B268F4A003A6A4A /* Supporting Files */,
+				03F3CD8C1B26CF51003A6A4A /* AOIOS-Bridging-Header.h */,
 			);
 			path = AOIOS;
 			sourceTree = "<group>";
@@ -655,6 +673,13 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		03F3CD971B26D72E003A6A4A /* Library */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Library;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -662,7 +687,9 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F3CCFA1B2683CE003A6A4A /* Utils.h in Headers */,
 				03F3CD1E1B2683CE003A6A4A /* SidebarViewController.h in Headers */,
+				03F3CD8A1B26CBD1003A6A4A /* NSObject+AOCocoa.h in Headers */,
 				03F3CCEC1B2683CE003A6A4A /* ARISockets.h in Headers */,
 				03F3CD3C1B2683CE003A6A4A /* common.h in Headers */,
 				03F3CCE71B2683CE003A6A4A /* RtspClientLinstener.h in Headers */,
@@ -686,7 +713,6 @@
 				03F3CD091B2683CE003A6A4A /* ArtEditView.h in Headers */,
 				03F3CCFF1B2683CE003A6A4A /* SqliteHelper.h in Headers */,
 				03F3CD251B2683CE003A6A4A /* ArtSubmitViewCellButton.h in Headers */,
-				03F3CCFA1B2683CE003A6A4A /* Utils.h in Headers */,
 				03F3CCF61B2683CE003A6A4A /* ArtNumberToCapital.h in Headers */,
 				03F3CD131B2683CE003A6A4A /* ArtFrameCellView.h in Headers */,
 				03F3CCE51B2683CE003A6A4A /* RtspClient.h in Headers */,
@@ -770,6 +796,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				03F3CD961B26D6CD003A6A4A /* PBXTargetDependency */,
 			);
 			name = AOIOS;
 			productName = AOIOS;
@@ -811,6 +838,7 @@
 					};
 					03F3CD5A1B268F4A003A6A4A = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = U7764RLDB5;
 					};
 					03F3CD701B268F4A003A6A4A = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -915,6 +943,7 @@
 				03F3CD061B2683CE003A6A4A /* ArtButtonMove.m in Sources */,
 				03F3CCF31B2683CE003A6A4A /* UnixUtils.swift in Sources */,
 				03F3CCF11B2683CE003A6A4A /* SocketAddress.swift in Sources */,
+				03F3CD8B1B26CBD1003A6A4A /* NSObject+AOCocoa.m in Sources */,
 				03F3CCF21B2683CE003A6A4A /* UnixBridge.c in Sources */,
 				03F3CCEB1B2683CE003A6A4A /* AOSocket.mm in Sources */,
 				03F3CCED1B2683CE003A6A4A /* DNS.swift in Sources */,
@@ -976,6 +1005,11 @@
 			isa = PBXTargetDependency;
 			target = 03F3CD5A1B268F4A003A6A4A /* AOIOS */;
 			targetProxy = 03F3CD721B268F4A003A6A4A /* PBXContainerItemProxy */;
+		};
+		03F3CD961B26D6CD003A6A4A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03F3CC421B268365003A6A4A /* AOCocoa */;
+			targetProxy = 03F3CD951B26D6CD003A6A4A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1158,13 +1192,22 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AOIOS/Library",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = AOIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AOIOS/AOIOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -1172,9 +1215,17 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/AOIOS/Library",
+				);
 				INFOPLIST_FILE = AOIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AOIOS/AOIOS-Bridging-Header.h";
 			};
 			name = Release;
 		};

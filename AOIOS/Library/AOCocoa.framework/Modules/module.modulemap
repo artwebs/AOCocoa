@@ -1,0 +1,10 @@
+framework module AOCocoa {
+  umbrella header "AOCocoa.h"
+
+  export *
+  module * { export * }
+}
+
+module AOCocoa.Swift {
+    header "AOCocoa-Swift.h"
+}
