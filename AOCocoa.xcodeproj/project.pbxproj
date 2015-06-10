@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03F09E2C1B27CF770015811C /* AOCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F3CC431B268365003A6A4A /* AOCocoa.framework */; };
+		03F09E2D1B27CF770015811C /* AOCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03F3CC431B268365003A6A4A /* AOCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		03F3CC491B268366003A6A4A /* AOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 03F3CC481B268366003A6A4A /* AOCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03F3CC4F1B268366003A6A4A /* AOCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F3CC431B268365003A6A4A /* AOCocoa.framework */; };
 		03F3CC561B268366003A6A4A /* AOCocoaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 03F3CC551B268366003A6A4A /* AOCocoaTests.swift */; };
@@ -149,14 +151,21 @@
 			remoteGlobalIDString = 03F3CD5A1B268F4A003A6A4A;
 			remoteInfo = AOIOS;
 		};
-		03F3CD951B26D6CD003A6A4A /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 03F3CC3A1B268365003A6A4A /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 03F3CC421B268365003A6A4A;
-			remoteInfo = AOCocoa;
-		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		03F09E2E1B27CF770015811C /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				03F09E2D1B27CF770015811C /* AOCocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		03F3CC431B268365003A6A4A /* AOCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AOCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -317,6 +326,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03F09E2C1B27CF770015811C /* AOCocoa.framework in Frameworks */,
 				03F3CD9A1B26D779003A6A4A /* libsqlite3.dylib in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -792,11 +802,11 @@
 				03F3CD571B268F4A003A6A4A /* Sources */,
 				03F3CD581B268F4A003A6A4A /* Frameworks */,
 				03F3CD591B268F4A003A6A4A /* Resources */,
+				03F09E2E1B27CF770015811C /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				03F3CD961B26D6CD003A6A4A /* PBXTargetDependency */,
 			);
 			name = AOIOS;
 			productName = AOIOS;
@@ -832,6 +842,7 @@
 				TargetAttributes = {
 					03F3CC421B268365003A6A4A = {
 						CreatedOnToolsVersion = 6.3.2;
+						DevelopmentTeam = U7764RLDB5;
 					};
 					03F3CC4D1B268366003A6A4A = {
 						CreatedOnToolsVersion = 6.3.2;
@@ -1005,11 +1016,6 @@
 			isa = PBXTargetDependency;
 			target = 03F3CD5A1B268F4A003A6A4A /* AOIOS */;
 			targetProxy = 03F3CD721B268F4A003A6A4A /* PBXContainerItemProxy */;
-		};
-		03F3CD961B26D6CD003A6A4A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 03F3CC421B268365003A6A4A /* AOCocoa */;
-			targetProxy = 03F3CD951B26D6CD003A6A4A /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1282,6 +1288,7 @@
 				03F3CC5B1B268366003A6A4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03F3CC5C1B268366003A6A4A /* Build configuration list for PBXNativeTarget "AOCocoaTests" */ = {
 			isa = XCConfigurationList;
@@ -1290,6 +1297,7 @@
 				03F3CC5E1B268366003A6A4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03F3CD791B268F4A003A6A4A /* Build configuration list for PBXNativeTarget "AOIOS" */ = {
 			isa = XCConfigurationList;
@@ -1298,6 +1306,7 @@
 				03F3CD7B1B268F4A003A6A4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03F3CD7C1B268F4A003A6A4A /* Build configuration list for PBXNativeTarget "AOIOSTests" */ = {
 			isa = XCConfigurationList;
@@ -1306,6 +1315,7 @@
 				03F3CD7E1B268F4A003A6A4A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
