@@ -19,12 +19,6 @@ FOUNDATION_EXPORT const unsigned char AOCocoaVersionString[];
 
 //#import <AOCocoa/Utils.h>
 #import <AOCocoa/ARISockets.h>
+#import <AOCocoa/AOCocoa-swift.h>
 //#import <AOCocoa/NSObject+AOCocoa.h>
 
-#ifndef AOCocoa_AOCocoa_h
-#define AOCocoa_AOCocoa_h
-
-// Include any system framework and library headers here that should be included in all compilation units.
-// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
-
-#endif
