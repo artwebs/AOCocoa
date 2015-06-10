@@ -1,0 +1,18 @@
+//
+//  AOCocoa-Perfix.pch
+//  AOCocoa
+//
+//  Created by 刘洪彬 on 15/6/10.
+//  Copyright (c) 2015年 刘洪彬. All rights reserved.
+//
+
+#ifndef AOCocoa_AOCocoa_Perfix_pch
+#define AOCocoa_AOCocoa_Perfix_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#endif
+#ifdef  __OBJC__
+
+#endif

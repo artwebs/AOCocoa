@@ -137,6 +137,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		03F09E361B281E040015811C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03F3CC3A1B268365003A6A4A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03F3CC421B268365003A6A4A;
+			remoteInfo = AOCocoa;
+		};
 		03F3CC501B268366003A6A4A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 03F3CC3A1B268365003A6A4A /* Project object */;
@@ -168,6 +175,7 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		03F09E351B281B730015811C /* AOCocoa-Perfix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AOCocoa-Perfix.pch"; sourceTree = "<group>"; };
 		03F3CC431B268365003A6A4A /* AOCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AOCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03F3CC471B268366003A6A4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03F3CC481B268366003A6A4A /* AOCocoa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOCocoa.h; sourceTree = "<group>"; };
@@ -388,6 +396,7 @@
 		03F3CC461B268365003A6A4A /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				03F09E351B281B730015811C /* AOCocoa-Perfix.pch */,
 				03F3CC471B268366003A6A4A /* Info.plist */,
 			);
 			name = "Supporting Files";
@@ -807,6 +816,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				03F09E371B281E040015811C /* PBXTargetDependency */,
 			);
 			name = AOIOS;
 			productName = AOIOS;
@@ -1007,6 +1017,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		03F09E371B281E040015811C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03F3CC421B268365003A6A4A /* AOCocoa */;
+			targetProxy = 03F09E361B281E040015811C /* PBXContainerItemProxy */;
+		};
 		03F3CC511B268366003A6A4A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 03F3CC421B268365003A6A4A /* AOCocoa */;
@@ -1080,6 +1095,10 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1123,6 +1142,10 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = (
+					"-ObjC",
+					"-all_load",
+				);
 				SDKROOT = iphoneos;
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1135,14 +1158,18 @@
 		03F3CC5A1B268366003A6A4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "$(TARGET_NAME)/$(TARGET_NAME)-Perfix.pch";
 				INFOPLIST_FILE = AOCocoa/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -1151,14 +1178,18 @@
 		03F3CC5B1B268366003A6A4A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "$(TARGET_NAME)/$(TARGET_NAME)-Perfix.pch";
 				INFOPLIST_FILE = AOCocoa/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
 			};
@@ -1204,12 +1235,14 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AOIOS/Library",
 				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
 				INFOPLIST_FILE = AOIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AOIOS/AOIOS-Bridging-Header.h";
@@ -1227,8 +1260,10 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/AOIOS/Library",
 				);
+				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				INFOPLIST_FILE = AOIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_LDFLAGS = "-all_load";
 				OTHER_SWIFT_FLAGS = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AOIOS/AOIOS-Bridging-Header.h";
