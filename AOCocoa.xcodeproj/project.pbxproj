@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		03359BF11B2EBD2B00E6A4E2 /* AOAggregate */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 03359BF21B2EBD2B00E6A4E2 /* Build configuration list for PBXAggregateTarget "AOAggregate" */;
+			buildPhases = (
+				03359BF51B2EBD5B00E6A4E2 /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = AOAggregate;
+			productName = AOAggregate;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		03F09E2C1B27CF770015811C /* AOCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03F3CC431B268365003A6A4A /* AOCocoa.framework */; };
 		03F09E2D1B27CF770015811C /* AOCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03F3CC431B268365003A6A4A /* AOCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -850,6 +864,9 @@
 				LastUpgradeCheck = 0630;
 				ORGANIZATIONNAME = "刘洪彬";
 				TargetAttributes = {
+					03359BF11B2EBD2B00E6A4E2 = {
+						CreatedOnToolsVersion = 6.3.2;
+					};
 					03F3CC421B268365003A6A4A = {
 						CreatedOnToolsVersion = 6.3.2;
 						DevelopmentTeam = U7764RLDB5;
@@ -884,6 +901,7 @@
 				03F3CC4D1B268366003A6A4A /* AOCocoaTests */,
 				03F3CD5A1B268F4A003A6A4A /* AOIOS */,
 				03F3CD701B268F4A003A6A4A /* AOIOSTests */,
+				03359BF11B2EBD2B00E6A4E2 /* AOAggregate */,
 			);
 		};
 /* End PBXProject section */
@@ -922,6 +940,22 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		03359BF51B2EBD5B00E6A4E2 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Sets the target folders and the final framework product.\n# 如果工程名称和Framework的Target名称不一样的话，要自定义FMKNAME\n# 例如: FMK_NAME = \"MyFramework\"\nFMK_NAME=${PROJECT_NAME}\n# Install dir will be the final output to the framework.\n# The following line create it in the root folder of the current project.\nINSTALL_DIR=${SRCROOT}/Products/${FMK_NAME}.framework\n# Working dir will be deleted after the framework creation.\nWRK_DIR=build\nDEVICE_DIR=${WRK_DIR}/Release-iphoneos/${FMK_NAME}.framework\nSIMULATOR_DIR=${WRK_DIR}/Release-iphonesimulator/${FMK_NAME}.framework\n# -configuration ${CONFIGURATION}\n# Clean and Building both architectures.\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphoneos clean build\nxcodebuild -configuration \"Release\" -target \"${FMK_NAME}\" -sdk iphonesimulator clean build\n# Cleaning the oldest.\nif [ -d \"${INSTALL_DIR}\" ]\nthen\nrm -rf \"${INSTALL_DIR}\"\nfi\nmkdir -p \"${INSTALL_DIR}\"\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n# Uses the Lipo Tool to merge both binary files (i386 + armv6/armv7) into one Universal final product.\nlipo -create \"${DEVICE_DIR}/${FMK_NAME}\" \"${SIMULATOR_DIR}/${FMK_NAME}\" -output \"${INSTALL_DIR}/${FMK_NAME}\"\nrm -r \"${WRK_DIR}\"\nopen \"${INSTALL_DIR}\"";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		03F3CC3E1B268365003A6A4A /* Sources */ = {
@@ -1054,6 +1088,20 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		03359BF31B2EBD2B00E6A4E2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		03359BF41B2EBD2B00E6A4E2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 		03F3CC571B268366003A6A4A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1307,6 +1355,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		03359BF21B2EBD2B00E6A4E2 /* Build configuration list for PBXAggregateTarget "AOAggregate" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				03359BF31B2EBD2B00E6A4E2 /* Debug */,
+				03359BF41B2EBD2B00E6A4E2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		03F3CC3D1B268365003A6A4A /* Build configuration list for PBXProject "AOCocoa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

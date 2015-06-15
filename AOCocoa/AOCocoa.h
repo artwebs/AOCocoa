@@ -19,6 +19,6 @@ FOUNDATION_EXPORT const unsigned char AOCocoaVersionString[];
 
 //#import <AOCocoa/Utils.h>
 #import <AOCocoa/ARISockets.h>
-#import <AOCocoa/AOCocoa-swift.h>
+//#import <AOCocoa/AOCocoa-swift.h>
 //#import <AOCocoa/NSObject+AOCocoa.h>
 

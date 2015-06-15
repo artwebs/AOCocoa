@@ -310,5 +310,15 @@
     return theImage;
 }
 
++(CGSize)stringLength:(NSString *)string fontSize:(float)size{
+    //设置字体,包括字体及其大小
+    UIFont *font = [UIFont boldSystemFontOfSize:size];
+    //label可设置的最大高度和宽度
+    CGSize maxSize = CGSizeMake(320.f, 2000.0f);
+    CGSize labelSize = [string sizeWithFont:font  constrainedToSize:maxSize lineBreakMode:NSLineBreakByWordWrapping];
+    return labelSize;
+}
+
+
 
 @end

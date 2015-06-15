@@ -19,6 +19,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
         self.log("test")
 //        var obj=DemoTest()
 //        obj.log("-----")
+        var str:String="test.txt"
         print(Utils.base64EncodeWithString("11111"))
         let splitViewController = self.window!.rootViewController as! UISplitViewController
         let navigationController = splitViewController.viewControllers[splitViewController.viewControllers.count-1] as! UINavigationController

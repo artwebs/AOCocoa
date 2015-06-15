@@ -71,4 +71,6 @@
 
 + (UIImage *)createImageWithColor:(UIColor *)color;
 + (UIImage *)createImageWithColor:(UIColor *)color rect:(CGRect)rect;
+
++(CGSize)stringLength:(NSString *)string fontSize:(float)size;
 @end
