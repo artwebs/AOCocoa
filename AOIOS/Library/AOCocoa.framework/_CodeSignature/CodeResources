@@ -10,7 +10,7 @@
 		</data>
 		<key>Headers/AOCocoa.h</key>
 		<data>
-		KpinBNFXggmlapGszHrdU+6vhcI=
+		GmRpdATunj4Vg7ArhkNfxSkQaLs=
 		</data>
 		<key>Headers/ARISockets.h</key>
 		<data>
@@ -22,11 +22,19 @@
 		</data>
 		<key>Headers/Utils.h</key>
 		<data>
-		lhHD7nvMFDQi+KCiz3siPpfWWLo=
+		MbangHjNFVYLByutoIDZndsXL84=
 		</data>
 		<key>Info.plist</key>
 		<data>
-		n1g97EneqUfE8n+P3KacyhRHfRI=
+		ImpT7xS8nf8LFnACclcga9kHSZ0=
+		</data>
+		<key>Modules/AOCocoa.swiftmodule/arm.swiftdoc</key>
+		<data>
+		eYunODYxuHmaL1KNo4g3Nif0upI=
+		</data>
+		<key>Modules/AOCocoa.swiftmodule/arm.swiftmodule</key>
+		<data>
+		5mKEc6ESQU1jZTT4Ur4ItGtaJBI=
 		</data>
 		<key>Modules/AOCocoa.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -34,7 +42,7 @@
 		</data>
 		<key>Modules/AOCocoa.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		i1Mj3xuV0OfapqQbfGDm3Hyzlhk=
+		TFe8FR8kwx1Xv8ESUpq7jb58Vf0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -42,7 +50,7 @@
 		</data>
 		<key>SidebarViewController.nib</key>
 		<data>
-		wbqq3iJUEX0huJRbdYM7yTs1yx4=
+		4JY/EAkV0u1V0Zsj9OrcB+rtX9Q=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -53,7 +61,7 @@
 		</data>
 		<key>Headers/AOCocoa.h</key>
 		<data>
-		KpinBNFXggmlapGszHrdU+6vhcI=
+		GmRpdATunj4Vg7ArhkNfxSkQaLs=
 		</data>
 		<key>Headers/ARISockets.h</key>
 		<data>
@@ -65,7 +73,15 @@
 		</data>
 		<key>Headers/Utils.h</key>
 		<data>
-		lhHD7nvMFDQi+KCiz3siPpfWWLo=
+		MbangHjNFVYLByutoIDZndsXL84=
+		</data>
+		<key>Modules/AOCocoa.swiftmodule/arm.swiftdoc</key>
+		<data>
+		eYunODYxuHmaL1KNo4g3Nif0upI=
+		</data>
+		<key>Modules/AOCocoa.swiftmodule/arm.swiftmodule</key>
+		<data>
+		5mKEc6ESQU1jZTT4Ur4ItGtaJBI=
 		</data>
 		<key>Modules/AOCocoa.swiftmodule/arm64.swiftdoc</key>
 		<data>
@@ -73,7 +89,7 @@
 		</data>
 		<key>Modules/AOCocoa.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		i1Mj3xuV0OfapqQbfGDm3Hyzlhk=
+		TFe8FR8kwx1Xv8ESUpq7jb58Vf0=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -81,7 +97,7 @@
 		</data>
 		<key>SidebarViewController.nib</key>
 		<data>
-		wbqq3iJUEX0huJRbdYM7yTs1yx4=
+		4JY/EAkV0u1V0Zsj9OrcB+rtX9Q=
 		</data>
 	</dict>
 	<key>rules</key>

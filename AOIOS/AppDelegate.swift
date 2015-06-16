@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  AOIOS
 //
-//  Created by 刘洪彬 on 15/6/9.
+//  Created by 刘洪彬 on 15/6/16.
 //  Copyright (c) 2015年 刘洪彬. All rights reserved.
 //
 
@@ -17,8 +17,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UISplitViewControllerDele
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         self.log("test")
-//        var obj=DemoTest()
-//        obj.log("-----")
+        //        var obj=DemoTest()
+        //        obj.log("-----")
         var str:String="test.txt"
         print(Utils.base64EncodeWithString("11111"))
         let splitViewController = self.window!.rootViewController as! UISplitViewController
