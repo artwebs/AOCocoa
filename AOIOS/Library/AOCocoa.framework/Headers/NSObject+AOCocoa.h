@@ -12,3 +12,7 @@
 -(void)log:(NSObject *)obj;
 -(NSString *)tag;
 @end
+
+@interface NSObject_AOCocoa
+
+@end
