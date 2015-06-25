@@ -28,13 +28,21 @@
 		<data>
 		ImpT7xS8nf8LFnACclcga9kHSZ0=
 		</data>
+		<key>Modules/AOCocoa.swiftmodule/arm.swiftdoc</key>
+		<data>
+		eYunODYxuHmaL1KNo4g3Nif0upI=
+		</data>
+		<key>Modules/AOCocoa.swiftmodule/arm.swiftmodule</key>
+		<data>
+		7aMl7489soH1ZgOcjSs6L8BrKbs=
+		</data>
 		<key>Modules/AOCocoa.swiftmodule/arm64.swiftdoc</key>
 		<data>
 		osVmDxRm2HCM/hlaqNRUtzto62Q=
 		</data>
 		<key>Modules/AOCocoa.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		Hxq3+qHow9N2j9p9E2AL4uCu1LI=
+		XMUfaKAl+yDeXapZ4eKstUZD+MA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -42,7 +50,7 @@
 		</data>
 		<key>SidebarViewController.nib</key>
 		<data>
-		ZZ4vGU69kl+vRpmZdUiK/tbXoxE=
+		0xnxXWKXLRctaJaGUKW2IGvg9JE=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -67,13 +75,21 @@
 		<data>
 		MbangHjNFVYLByutoIDZndsXL84=
 		</data>
+		<key>Modules/AOCocoa.swiftmodule/arm.swiftdoc</key>
+		<data>
+		eYunODYxuHmaL1KNo4g3Nif0upI=
+		</data>
+		<key>Modules/AOCocoa.swiftmodule/arm.swiftmodule</key>
+		<data>
+		7aMl7489soH1ZgOcjSs6L8BrKbs=
+		</data>
 		<key>Modules/AOCocoa.swiftmodule/arm64.swiftdoc</key>
 		<data>
 		osVmDxRm2HCM/hlaqNRUtzto62Q=
 		</data>
 		<key>Modules/AOCocoa.swiftmodule/arm64.swiftmodule</key>
 		<data>
-		Hxq3+qHow9N2j9p9E2AL4uCu1LI=
+		XMUfaKAl+yDeXapZ4eKstUZD+MA=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
@@ -81,7 +97,7 @@
 		</data>
 		<key>SidebarViewController.nib</key>
 		<data>
-		ZZ4vGU69kl+vRpmZdUiK/tbXoxE=
+		0xnxXWKXLRctaJaGUKW2IGvg9JE=
 		</data>
 	</dict>
 	<key>rules</key>
