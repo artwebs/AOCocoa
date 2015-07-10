@@ -10,83 +10,83 @@
 		03D25F791B4E4220005BC492 /* AOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F781B4E4220005BC492 /* AOCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D25F7F1B4E4220005BC492 /* AOCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D25F731B4E4220005BC492 /* AOCocoa.framework */; };
 		03D25F861B4E4220005BC492 /* AOCocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25F851B4E4220005BC492 /* AOCocoaTests.m */; };
-		03D260121B4E428E005BC492 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F901B4E428E005BC492 /* NSData+Base64.h */; };
+		03D260121B4E428E005BC492 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F901B4E428E005BC492 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260131B4E428E005BC492 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25F911B4E428E005BC492 /* NSData+Base64.m */; };
 		03D260141B4E428E005BC492 /* NSObject+AOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F921B4E428E005BC492 /* NSObject+AOCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260151B4E428E005BC492 /* NSObject+AOCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25F931B4E428E005BC492 /* NSObject+AOCocoa.m */; };
-		03D260161B4E428E005BC492 /* ArtNumberToCapital.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F951B4E428E005BC492 /* ArtNumberToCapital.h */; };
+		03D260161B4E428E005BC492 /* ArtNumberToCapital.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F951B4E428E005BC492 /* ArtNumberToCapital.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260171B4E428E005BC492 /* ArtNumberToCapital.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25F961B4E428E005BC492 /* ArtNumberToCapital.m */; };
-		03D260181B4E428E005BC492 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F971B4E428E005BC492 /* NSData+Base64.h */; };
+		03D260181B4E428E005BC492 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F971B4E428E005BC492 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260191B4E428E005BC492 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25F981B4E428E005BC492 /* NSData+Base64.m */; };
 		03D2601A1B4E428E005BC492 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F991B4E428E005BC492 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D2601B1B4E428E005BC492 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25F9A1B4E428E005BC492 /* Utils.m */; };
-		03D2601E1B4E428E005BC492 /* AOSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F9E1B4E428E005BC492 /* AOSocket.h */; };
+		03D2601E1B4E428E005BC492 /* AOSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F9E1B4E428E005BC492 /* AOSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D2601F1B4E428E005BC492 /* AOSocket.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03D25F9F1B4E428E005BC492 /* AOSocket.mm */; };
 		03D260281B4E428E005BC492 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FA91B4E428E005BC492 /* Base64.h */; };
 		03D260291B4E428E005BC492 /* Base64.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FAA1B4E428E005BC492 /* Base64.mm */; };
-		03D2602A1B4E428E005BC492 /* RTPUnpackage.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FAB1B4E428E005BC492 /* RTPUnpackage.h */; };
+		03D2602A1B4E428E005BC492 /* RTPUnpackage.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FAB1B4E428E005BC492 /* RTPUnpackage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D2602B1B4E428E005BC492 /* RTPUnpackage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FAC1B4E428E005BC492 /* RTPUnpackage.mm */; };
 		03D2602C1B4E428E005BC492 /* RtspClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FAD1B4E428E005BC492 /* RtspClient.h */; };
 		03D2602D1B4E428E005BC492 /* RtspClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FAE1B4E428E005BC492 /* RtspClient.mm */; };
 		03D2602E1B4E428E005BC492 /* RtspClientLinstener.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FAF1B4E428E005BC492 /* RtspClientLinstener.h */; };
-		03D2602F1B4E428E005BC492 /* SimpleTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FB11B4E428E005BC492 /* SimpleTable.h */; };
+		03D2602F1B4E428E005BC492 /* SimpleTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FB11B4E428E005BC492 /* SimpleTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260301B4E428E005BC492 /* SimpleTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FB21B4E428E005BC492 /* SimpleTable.m */; };
-		03D260311B4E428E005BC492 /* SqliteHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FB31B4E428E005BC492 /* SqliteHelper.h */; };
+		03D260311B4E428E005BC492 /* SqliteHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FB31B4E428E005BC492 /* SqliteHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260321B4E428E005BC492 /* SqliteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FB41B4E428E005BC492 /* SqliteHelper.m */; };
-		03D260331B4E428E005BC492 /* ArtAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FB61B4E428E005BC492 /* ArtAlert.h */; };
+		03D260331B4E428E005BC492 /* ArtAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FB61B4E428E005BC492 /* ArtAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260341B4E428E005BC492 /* ArtAlert.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FB71B4E428E005BC492 /* ArtAlert.m */; };
-		03D260351B4E428E005BC492 /* ArtAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FB81B4E428E005BC492 /* ArtAlertView.h */; };
+		03D260351B4E428E005BC492 /* ArtAlertView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FB81B4E428E005BC492 /* ArtAlertView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260361B4E428E005BC492 /* ArtAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FB91B4E428E005BC492 /* ArtAlertView.m */; };
-		03D260371B4E428E005BC492 /* ArtButtonMove.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FBA1B4E428E005BC492 /* ArtButtonMove.h */; };
+		03D260371B4E428E005BC492 /* ArtButtonMove.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FBA1B4E428E005BC492 /* ArtButtonMove.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260381B4E428E005BC492 /* ArtButtonMove.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FBB1B4E428E005BC492 /* ArtButtonMove.m */; };
-		03D260391B4E428E005BC492 /* ArtCircleProcessView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FBC1B4E428E005BC492 /* ArtCircleProcessView.h */; };
+		03D260391B4E428E005BC492 /* ArtCircleProcessView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FBC1B4E428E005BC492 /* ArtCircleProcessView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D2603A1B4E428E005BC492 /* ArtCircleProcessView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FBD1B4E428E005BC492 /* ArtCircleProcessView.m */; };
-		03D2603B1B4E428E005BC492 /* ArtEditView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FBE1B4E428E005BC492 /* ArtEditView.h */; };
+		03D2603B1B4E428E005BC492 /* ArtEditView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FBE1B4E428E005BC492 /* ArtEditView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D2603C1B4E428E005BC492 /* ArtEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FBF1B4E428E005BC492 /* ArtEditView.m */; };
-		03D2603D1B4E428E005BC492 /* ArtListControlPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FC01B4E428E005BC492 /* ArtListControlPage.h */; };
+		03D2603D1B4E428E005BC492 /* ArtListControlPage.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FC01B4E428E005BC492 /* ArtListControlPage.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D2603E1B4E428E005BC492 /* ArtListControlPage.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FC11B4E428E005BC492 /* ArtListControlPage.m */; };
-		03D2603F1B4E428E005BC492 /* ArtQrCodeDeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FC21B4E428E005BC492 /* ArtQrCodeDeView.h */; };
+		03D2603F1B4E428E005BC492 /* ArtQrCodeDeView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FC21B4E428E005BC492 /* ArtQrCodeDeView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260401B4E428E005BC492 /* ArtQrCodeDeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FC31B4E428E005BC492 /* ArtQrCodeDeView.m */; };
-		03D260411B4E428E005BC492 /* ArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FC41B4E428E005BC492 /* ArtView.h */; };
+		03D260411B4E428E005BC492 /* ArtView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FC41B4E428E005BC492 /* ArtView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260421B4E428E005BC492 /* ArtView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FC51B4E428E005BC492 /* ArtView.m */; };
-		03D260431B4E428E005BC492 /* DicListView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FC61B4E428E005BC492 /* DicListView.h */; };
+		03D260431B4E428E005BC492 /* DicListView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FC61B4E428E005BC492 /* DicListView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260441B4E428E005BC492 /* DicListView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FC71B4E428E005BC492 /* DicListView.m */; };
-		03D260451B4E428E005BC492 /* ArtFrameCellView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FC91B4E428E005BC492 /* ArtFrameCellView.h */; };
+		03D260451B4E428E005BC492 /* ArtFrameCellView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FC91B4E428E005BC492 /* ArtFrameCellView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260461B4E428E005BC492 /* ArtFrameCellView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FCA1B4E428E005BC492 /* ArtFrameCellView.m */; };
-		03D260471B4E428E005BC492 /* ArtFrameDragView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FCB1B4E428E005BC492 /* ArtFrameDragView.h */; };
+		03D260471B4E428E005BC492 /* ArtFrameDragView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FCB1B4E428E005BC492 /* ArtFrameDragView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260481B4E428E005BC492 /* ArtFrameDragView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FCC1B4E428E005BC492 /* ArtFrameDragView.m */; };
-		03D260491B4E428E005BC492 /* ArtFramePlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FCD1B4E428E005BC492 /* ArtFramePlayView.h */; };
+		03D260491B4E428E005BC492 /* ArtFramePlayView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FCD1B4E428E005BC492 /* ArtFramePlayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D2604A1B4E428E005BC492 /* ArtFramePlayView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FCE1B4E428E005BC492 /* ArtFramePlayView.m */; };
-		03D2604B1B4E428E005BC492 /* ArtFrameSuperView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FCF1B4E428E005BC492 /* ArtFrameSuperView.h */; };
+		03D2604B1B4E428E005BC492 /* ArtFrameSuperView.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FCF1B4E428E005BC492 /* ArtFrameSuperView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D2604C1B4E428E005BC492 /* ArtFrameSuperView.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FD01B4E428E005BC492 /* ArtFrameSuperView.m */; };
-		03D2604D1B4E428E005BC492 /* SidebarMenuViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FD21B4E428E005BC492 /* SidebarMenuViewController.h */; };
+		03D2604D1B4E428E005BC492 /* SidebarMenuViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FD21B4E428E005BC492 /* SidebarMenuViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D2604E1B4E428E005BC492 /* SidebarMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FD31B4E428E005BC492 /* SidebarMenuViewController.m */; };
-		03D2604F1B4E428E005BC492 /* SideBarSelectedDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FD41B4E428E005BC492 /* SideBarSelectedDelegate.h */; };
-		03D260501B4E428E005BC492 /* SidebarViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FD51B4E428E005BC492 /* SidebarViewController.h */; };
+		03D2604F1B4E428E005BC492 /* SideBarSelectedDelegate.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FD41B4E428E005BC492 /* SideBarSelectedDelegate.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03D260501B4E428E005BC492 /* SidebarViewController.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FD51B4E428E005BC492 /* SidebarViewController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260511B4E428E005BC492 /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FD61B4E428E005BC492 /* SidebarViewController.m */; };
 		03D260521B4E428E005BC492 /* SidebarViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 03D25FD71B4E428E005BC492 /* SidebarViewController.xib */; };
-		03D260531B4E428E005BC492 /* ArtSubmitControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FD91B4E428E005BC492 /* ArtSubmitControl.h */; };
+		03D260531B4E428E005BC492 /* ArtSubmitControl.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FD91B4E428E005BC492 /* ArtSubmitControl.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260541B4E428E005BC492 /* ArtSubmitControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FDA1B4E428E005BC492 /* ArtSubmitControl.m */; };
-		03D260551B4E428E005BC492 /* ArtSubmitViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FDB1B4E428E005BC492 /* ArtSubmitViewCell.h */; };
+		03D260551B4E428E005BC492 /* ArtSubmitViewCell.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FDB1B4E428E005BC492 /* ArtSubmitViewCell.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260561B4E428E005BC492 /* ArtSubmitViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FDC1B4E428E005BC492 /* ArtSubmitViewCell.m */; };
-		03D260571B4E428E005BC492 /* ArtSubmitViewCellButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FDD1B4E428E005BC492 /* ArtSubmitViewCellButton.h */; };
+		03D260571B4E428E005BC492 /* ArtSubmitViewCellButton.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FDD1B4E428E005BC492 /* ArtSubmitViewCellButton.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260581B4E428E005BC492 /* ArtSubmitViewCellButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FDE1B4E428E005BC492 /* ArtSubmitViewCellButton.m */; };
-		03D260591B4E428E005BC492 /* AddressBook.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FE01B4E428E005BC492 /* AddressBook.h */; };
+		03D260591B4E428E005BC492 /* AddressBook.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FE01B4E428E005BC492 /* AddressBook.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D2605A1B4E428E005BC492 /* AddressBook.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FE11B4E428E005BC492 /* AddressBook.m */; };
-		03D2605B1B4E428E005BC492 /* AsyncRemoteOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FE31B4E428E005BC492 /* AsyncRemoteOperation.h */; };
+		03D2605B1B4E428E005BC492 /* AsyncRemoteOperation.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FE31B4E428E005BC492 /* AsyncRemoteOperation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D2605C1B4E428E005BC492 /* AsyncRemoteOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FE41B4E428E005BC492 /* AsyncRemoteOperation.m */; };
-		03D2605D1B4E428E005BC492 /* IService.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FE51B4E428E005BC492 /* IService.h */; };
-		03D2605E1B4E428E005BC492 /* IServiceHttp.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FE61B4E428E005BC492 /* IServiceHttp.h */; };
+		03D2605D1B4E428E005BC492 /* IService.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FE51B4E428E005BC492 /* IService.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03D2605E1B4E428E005BC492 /* IServiceHttp.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FE61B4E428E005BC492 /* IServiceHttp.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D2605F1B4E428E005BC492 /* IServiceHttp.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FE71B4E428E005BC492 /* IServiceHttp.m */; };
-		03D260601B4E428E005BC492 /* IServiceHttpSync.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FE81B4E428E005BC492 /* IServiceHttpSync.h */; };
+		03D260601B4E428E005BC492 /* IServiceHttpSync.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FE81B4E428E005BC492 /* IServiceHttpSync.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260611B4E428E005BC492 /* IServiceHttpSync.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FE91B4E428E005BC492 /* IServiceHttpSync.m */; };
-		03D260621B4E428E005BC492 /* RData.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FEA1B4E428E005BC492 /* RData.h */; };
+		03D260621B4E428E005BC492 /* RData.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FEA1B4E428E005BC492 /* RData.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260631B4E428E005BC492 /* RData.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FEB1B4E428E005BC492 /* RData.m */; };
-		03D260641B4E428E005BC492 /* RemoteFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FEC1B4E428E005BC492 /* RemoteFactory.h */; };
+		03D260641B4E428E005BC492 /* RemoteFactory.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FEC1B4E428E005BC492 /* RemoteFactory.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260651B4E428E005BC492 /* RemoteFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FED1B4E428E005BC492 /* RemoteFactory.m */; };
-		03D260671B4E428E005BC492 /* Response.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FEF1B4E428E005BC492 /* Response.h */; };
+		03D260671B4E428E005BC492 /* Response.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FEF1B4E428E005BC492 /* Response.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260681B4E428E005BC492 /* Response.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FF01B4E428E005BC492 /* Response.m */; };
-		03D260691B4E428E005BC492 /* ServiceTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FF21B4E428E005BC492 /* ServiceTask.h */; };
+		03D260691B4E428E005BC492 /* ServiceTask.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FF21B4E428E005BC492 /* ServiceTask.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D2606A1B4E428E005BC492 /* ServiceTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FF31B4E428E005BC492 /* ServiceTask.m */; };
 		03D2606B1B4E428E005BC492 /* avcodec.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FF51B4E428E005BC492 /* avcodec.h */; };
 		03D2606C1B4E428E005BC492 /* cabac.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FF61B4E428E005BC492 /* cabac.h */; };
@@ -108,11 +108,11 @@
 		03D2607C1B4E428E005BC492 /* SubPackage.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D260061B4E428E005BC492 /* SubPackage.h */; };
 		03D2607D1B4E428E005BC492 /* SubPackage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03D260071B4E428E005BC492 /* SubPackage.mm */; };
 		03D2607E1B4E428E005BC492 /* SubPackageListener.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D260081B4E428E005BC492 /* SubPackageListener.h */; };
-		03D2607F1B4E428E005BC492 /* ArtLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D2600A1B4E428E005BC492 /* ArtLog.h */; };
+		03D2607F1B4E428E005BC492 /* ArtLog.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D2600A1B4E428E005BC492 /* ArtLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260801B4E428E005BC492 /* ArtLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2600B1B4E428E005BC492 /* ArtLog.m */; };
-		03D260811B4E428E005BC492 /* Security.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D2600D1B4E428E005BC492 /* Security.h */; };
+		03D260811B4E428E005BC492 /* Security.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D2600D1B4E428E005BC492 /* Security.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260821B4E428E005BC492 /* Security.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2600E1B4E428E005BC492 /* Security.m */; };
-		03D260831B4E428E005BC492 /* SecurityDES.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D2600F1B4E428E005BC492 /* SecurityDES.h */; };
+		03D260831B4E428E005BC492 /* SecurityDES.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D2600F1B4E428E005BC492 /* SecurityDES.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260841B4E428E005BC492 /* SecurityDES.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D260101B4E428E005BC492 /* SecurityDES.m */; };
 		03D260871B4E4345005BC492 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D260861B4E4345005BC492 /* libsqlite3.dylib */; };
 /* End PBXBuildFile section */
@@ -563,56 +563,56 @@
 				03D2601A1B4E428E005BC492 /* Utils.h in Headers */,
 				03D260501B4E428E005BC492 /* SidebarViewController.h in Headers */,
 				03D2606E1B4E428E005BC492 /* common.h in Headers */,
-				03D260281B4E428E005BC492 /* Base64.h in Headers */,
 				03D2603F1B4E428E005BC492 /* ArtQrCodeDeView.h in Headers */,
 				03D260371B4E428E005BC492 /* ArtButtonMove.h in Headers */,
-				03D2607E1B4E428E005BC492 /* SubPackageListener.h in Headers */,
 				03D2604B1B4E428E005BC492 /* ArtFrameSuperView.h in Headers */,
 				03D260471B4E428E005BC492 /* ArtFrameDragView.h in Headers */,
-				03D260761B4E428E005BC492 /* h264data.h in Headers */,
 				03D260331B4E428E005BC492 /* ArtAlert.h in Headers */,
 				03D260121B4E428E005BC492 /* NSData+Base64.h in Headers */,
 				03D2604F1B4E428E005BC492 /* SideBarSelectedDelegate.h in Headers */,
 				03D260491B4E428E005BC492 /* ArtFramePlayView.h in Headers */,
-				03D2607A1B4E428E005BC492 /* mpegvideo.h in Headers */,
 				03D2604D1B4E428E005BC492 /* SidebarMenuViewController.h in Headers */,
 				03D260531B4E428E005BC492 /* ArtSubmitControl.h in Headers */,
-				03D260741B4E428E005BC492 /* h264.h in Headers */,
 				03D2602A1B4E428E005BC492 /* RTPUnpackage.h in Headers */,
 				03D2603B1B4E428E005BC492 /* ArtEditView.h in Headers */,
 				03D260311B4E428E005BC492 /* SqliteHelper.h in Headers */,
 				03D260571B4E428E005BC492 /* ArtSubmitViewCellButton.h in Headers */,
 				03D2601E1B4E428E005BC492 /* AOSocket.h in Headers */,
-				03D2602E1B4E428E005BC492 /* RtspClientLinstener.h in Headers */,
 				03D260451B4E428E005BC492 /* ArtFrameCellView.h in Headers */,
-				03D2602C1B4E428E005BC492 /* RtspClient.h in Headers */,
 				03D2605E1B4E428E005BC492 /* IServiceHttp.h in Headers */,
 				03D260181B4E428E005BC492 /* NSData+Base64.h in Headers */,
-				03D260701B4E428E005BC492 /* dsputil.h in Headers */,
 				03D260641B4E428E005BC492 /* RemoteFactory.h in Headers */,
-				03D2606B1B4E428E005BC492 /* avcodec.h in Headers */,
 				03D2607F1B4E428E005BC492 /* ArtLog.h in Headers */,
-				03D25F791B4E4220005BC492 /* AOCocoa.h in Headers */,
 				03D2602F1B4E428E005BC492 /* SimpleTable.h in Headers */,
 				03D2605D1B4E428E005BC492 /* IService.h in Headers */,
 				03D260391B4E428E005BC492 /* ArtCircleProcessView.h in Headers */,
 				03D260671B4E428E005BC492 /* Response.h in Headers */,
 				03D260351B4E428E005BC492 /* ArtAlertView.h in Headers */,
 				03D260161B4E428E005BC492 /* ArtNumberToCapital.h in Headers */,
-				03D260721B4E428E005BC492 /* golomb.h in Headers */,
 				03D260601B4E428E005BC492 /* IServiceHttpSync.h in Headers */,
 				03D2603D1B4E428E005BC492 /* ArtListControlPage.h in Headers */,
 				03D260621B4E428E005BC492 /* RData.h in Headers */,
 				03D260591B4E428E005BC492 /* AddressBook.h in Headers */,
-				03D2607C1B4E428E005BC492 /* SubPackage.h in Headers */,
 				03D260831B4E428E005BC492 /* SecurityDES.h in Headers */,
 				03D260431B4E428E005BC492 /* DicListView.h in Headers */,
 				03D260811B4E428E005BC492 /* Security.h in Headers */,
 				03D2605B1B4E428E005BC492 /* AsyncRemoteOperation.h in Headers */,
-				03D260781B4E428E005BC492 /* MainH264.h in Headers */,
 				03D260411B4E428E005BC492 /* ArtView.h in Headers */,
 				03D260551B4E428E005BC492 /* ArtSubmitViewCell.h in Headers */,
 				03D260691B4E428E005BC492 /* ServiceTask.h in Headers */,
+				03D260281B4E428E005BC492 /* Base64.h in Headers */,
+				03D2607E1B4E428E005BC492 /* SubPackageListener.h in Headers */,
+				03D260761B4E428E005BC492 /* h264data.h in Headers */,
+				03D2607A1B4E428E005BC492 /* mpegvideo.h in Headers */,
+				03D260741B4E428E005BC492 /* h264.h in Headers */,
+				03D2602E1B4E428E005BC492 /* RtspClientLinstener.h in Headers */,
+				03D2602C1B4E428E005BC492 /* RtspClient.h in Headers */,
+				03D260701B4E428E005BC492 /* dsputil.h in Headers */,
+				03D2606B1B4E428E005BC492 /* avcodec.h in Headers */,
+				03D25F791B4E4220005BC492 /* AOCocoa.h in Headers */,
+				03D260721B4E428E005BC492 /* golomb.h in Headers */,
+				03D2607C1B4E428E005BC492 /* SubPackage.h in Headers */,
+				03D260781B4E428E005BC492 /* MainH264.h in Headers */,
 				03D2606C1B4E428E005BC492 /* cabac.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -957,6 +957,7 @@
 				03D25F8B1B4E4220005BC492 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		03D25F8C1B4E4220005BC492 /* Build configuration list for PBXNativeTarget "AOCocoaTests" */ = {
 			isa = XCConfigurationList;
@@ -965,6 +966,7 @@
 				03D25F8E1B4E4220005BC492 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
