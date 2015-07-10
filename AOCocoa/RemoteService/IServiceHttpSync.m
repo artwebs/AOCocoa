@@ -42,73 +42,87 @@ static NSString *tag=@"IServiceHttpSync";
     return rs;
 }
 
--(NSString *)sendParems: (NSMutableDictionary *)postParems path:(NSString *)filePath
+-(NSString *)sendParems: (NSMutableDictionary *)postParems imageDict:(NSMutableDictionary *) dicImages
 {
-    NSString *TWITTERFON_FORM_BOUNDARY = @"0xKhTmLbOuNdArY";
+    NSString * res;
+    
+    
+    //分界线的标识符
+    NSString *TWITTERFON_FORM_BOUNDARY = @"AaB03x";
     //根据url初始化request
-    NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:urlStr]
-                                                           cachePolicy:NSURLRequestReloadIgnoringLocalCacheData
-                                                       timeoutInterval:10];
+    //NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:strUrl] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
+    
+    NSURL *url = [NSURL URLWithString:urlStr];
+    NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     //分界线 --AaB03x
     NSString *MPboundary=[[NSString alloc]initWithFormat:@"--%@",TWITTERFON_FORM_BOUNDARY];
     //结束符 AaB03x--
     NSString *endMPboundary=[[NSString alloc]initWithFormat:@"%@--",MPboundary];
+    //要上传的图片
+    UIImage *image;//=[params objectForKey:@"pic"];
     //得到图片的data
-    NSData* data;
-    if(filePath){
-        
-        UIImage *image=[UIImage imageWithContentsOfFile:filePath];
-        //判断图片是不是png格式的文件
-        if (UIImagePNGRepresentation(image)) {
-            //返回为png图像。
-            data = UIImagePNGRepresentation(image);
-        }else {
-            //返回为JPEG图像。
-            data = UIImageJPEGRepresentation(image, 1.0);
-        }
-    }
+    //NSData* data = UIImagePNGRepresentation(image);
     //http body的字符串
     NSMutableString *body=[[NSMutableString alloc]init];
     //参数的集合的所有key的集合
     NSArray *keys= [postParems allKeys];
     
     //遍历keys
-    for(int i=0;i<[keys count];i++)
-    {
+    for(int i=0;i<[keys count];i++) {
         //得到当前key
         NSString *key=[keys objectAtIndex:i];
-        
+        //如果key不是pic，说明value是字符类型，比如name：Boris
+        //if(![key isEqualToString:@"pic"]) {
         //添加分界线，换行
         [body appendFormat:@"%@\r\n",MPboundary];
         //添加字段名称，换2行
         [body appendFormat:@"Content-Disposition: form-data; name=\"%@\"\r\n\r\n",key];
+        //[body appendString:@"Content-Transfer-Encoding: 8bit"];
         //添加字段的值
         [body appendFormat:@"%@\r\n",[postParems objectForKey:key]];
-        
-        NSLog(@"添加字段的值==%@",[postParems objectForKey:key]);
+        //}
     }
+    ////添加分界线，换行
+    //[body appendFormat:@"%@\r\n",MPboundary];
     
-    if(filePath){
-        ////添加分界线，换行
-        [body appendFormat:@"%@\r\n",MPboundary];
-        
-        //声明pic字段，文件名为boris.png
-        [body appendFormat:@"Content-Disposition: form-data; name=\"%@\"; filename=\"%@\"\r\n",@"upload",filePath];
-        //声明上传文件的格式
-        [body appendFormat:@"Content-Type: image/jpge,image/gif, image/jpeg, image/pjpeg, image/pjpeg\r\n\r\n"];
+    //声明myRequestData，用来放入http body
+    NSMutableData *myRequestData=[NSMutableData data];
+    //将body字符串转化为UTF8格式的二进制
+    [myRequestData appendData:[body dataUsingEncoding:NSUTF8StringEncoding]];
+    
+    //循环加入上传图片
+    if (dicImages) {
+        keys = [dicImages allKeys];
+        for(int i = 0; i< [keys count] ; i++){
+            //要上传的图片
+            image = [dicImages objectForKey:[keys objectAtIndex:i ]];
+            //得到图片的data
+            NSData* data =  UIImageJPEGRepresentation(image, 0.0);
+            NSMutableString *imgbody = [[NSMutableString alloc] init];
+            //此处循环添加图片文件
+            //添加图片信息字段
+            //声明pic字段，文件名为boris.png
+            //[body appendFormat:[NSString stringWithFormat: @"Content-Disposition: form-data; name=\"File\"; filename=\"%@\"\r\n", [keys objectAtIndex:i]]];
+            
+            ////添加分界线，换行
+            [imgbody appendFormat:@"%@\r\n",MPboundary];
+            [imgbody appendFormat:@"Content-Disposition: form-data; name=\"File%d\"; filename=\"%@.jpg\"\r\n", i, [keys objectAtIndex:i]];
+            //声明上传文件的格式
+            [imgbody appendFormat:@"Content-Type: application/octet-stream; charset=utf-8\r\n\r\n"];
+            
+            NSLog(@"上传的图片：%d  %@", i, [keys objectAtIndex:i]);
+            
+            //将body字符串转化为UTF8格式的二进制
+            //[myRequestData appendData:[body dataUsingEncoding:NSUTF8StringEncoding]];
+            [myRequestData appendData:[imgbody dataUsingEncoding:NSUTF8StringEncoding]];
+            //将image的data加入
+            [myRequestData appendData:data];
+            [myRequestData appendData:[ @"\r\n" dataUsingEncoding:NSUTF8StringEncoding]];
+        }
     }
     
     //声明结束符：--AaB03x--
-    NSString *end=[[NSString alloc]initWithFormat:@"\r\n%@",endMPboundary];
-    //声明myRequestData，用来放入http body
-    NSMutableData *myRequestData=[NSMutableData data];
-    
-    //将body字符串转化为UTF8格式的二进制
-    [myRequestData appendData:[body dataUsingEncoding:NSUTF8StringEncoding]];
-    if(filePath){
-        //将image的data加入
-        [myRequestData appendData:data];
-    }
+    NSString *end=[[NSString alloc]initWithFormat:@"%@\r\n",endMPboundary];
     //加入结束符--AaB03x--
     [myRequestData appendData:[end dataUsingEncoding:NSUTF8StringEncoding]];
     
@@ -116,23 +130,50 @@ static NSString *tag=@"IServiceHttpSync";
     NSString *content=[[NSString alloc]initWithFormat:@"multipart/form-data; boundary=%@",TWITTERFON_FORM_BOUNDARY];
     //设置HTTPHeader
     [request setValue:content forHTTPHeaderField:@"Content-Type"];
+    //[request setValue:@"keep-alive" forHTTPHeaderField:@"connection"];
+    //[request setValue:@"UTF-8" forHTTPHeaderField:@"Charsert"];
     //设置Content-Length
-    [request setValue:[NSString stringWithFormat:@"%d", (int)[myRequestData length]] forHTTPHeaderField:@"Content-Length"];
+    [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[myRequestData length]] forHTTPHeaderField:@"Content-Length"];
     //设置http body
     [request setHTTPBody:myRequestData];
     //http method
     [request setHTTPMethod:@"POST"];
     
+    //建立连接，设置代理
+    //NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     
+    //设置接受response的data
     NSHTTPURLResponse *urlResponese = nil;
-    NSError *error = [[NSError alloc]init];
-    NSData* resultData = [NSURLConnection sendSynchronousRequest:request   returningResponse:&urlResponese error:&error];
-    NSString* result= [[NSString alloc] initWithData:resultData encoding:NSUTF8StringEncoding];
-    if([urlResponese statusCode] >=200&&[urlResponese statusCode]<300){
-        NSLog(@"返回结果=====%@",result);
-        return result;
+    NSData *mResponseData;
+    NSError *err = nil;
+    mResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponese error:&err];
+    
+    if(mResponseData == nil){
+        NSLog(@"err code : %@", [err localizedDescription]);
     }
+    res = [[NSString alloc] initWithData:mResponseData encoding:NSUTF8StringEncoding];
+    
+    if([urlResponese statusCode] >=200&&[urlResponese statusCode]<300){
+        NSLog(@"返回结果=====%@",res);
+        return res;
+    }
+    /*
+     if (conn) {
+     mResponseData = [NSMutableData data];
+     mResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&err];
+     
+     if(mResponseData == nil){
+     NSLog(@"err code : %@", [err localizedDescription]);
+     }
+     res = [[NSString alloc] initWithData:mResponseData encoding:NSUTF8StringEncoding];
+     }else{
+     res = [[NSString alloc] init];
+     }*/
+    NSLog(@"服务器返回：%@", res);
     return nil;
+
 }
+
+
 
 @end
