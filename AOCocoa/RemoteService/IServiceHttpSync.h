@@ -14,5 +14,6 @@
 }
 -(id)initWithUrl:(NSString *)_url;
 -(NSString *)sendMessage:(NSString *)params;
--(NSString *)sendParems: (NSMutableDictionary *)postParems path:(NSString *)filePath;
+-(NSString *)sendParems: (NSMutableDictionary *)postParems;
+-(NSString *)sendParems: (NSMutableDictionary *)postParems imageDict:(NSMutableDictionary *) dicImages;
 @end

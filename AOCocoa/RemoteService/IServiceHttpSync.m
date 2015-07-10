@@ -42,6 +42,11 @@ static NSString *tag=@"IServiceHttpSync";
     return rs;
 }
 
+-(NSString *)sendParems:(NSMutableDictionary *)postParems
+{
+    return [self sendParems:postParems imageDict:nil];
+}
+
 -(NSString *)sendParems: (NSMutableDictionary *)postParems imageDict:(NSMutableDictionary *) dicImages
 {
     NSString * res;
