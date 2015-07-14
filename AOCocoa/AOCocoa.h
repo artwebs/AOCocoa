@@ -19,6 +19,9 @@ FOUNDATION_EXPORT const unsigned char AOCocoaVersionString[];
 
 #import <AOCocoa/Utils.h>
 
+//view
+#import <AOCocoa/AOHelpView.h>
+
 #import <AOCocoa/AsyncRemoteOperation.h>
 #import <AOCocoa/IService.h>
 #import <AOCocoa/IServiceHttp.h>
@@ -26,5 +29,6 @@ FOUNDATION_EXPORT const unsigned char AOCocoaVersionString[];
 #import <AOCocoa/RData.h>
 #import <AOCocoa/RemoteFactory.h>
 #import <AOCocoa/Response.h>
+
 
 

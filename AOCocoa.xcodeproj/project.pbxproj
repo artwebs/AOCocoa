@@ -7,6 +7,21 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		033AE2781B54D4130015EBB0 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 033AE2771B54D4130015EBB0 /* MenuViewController.swift */; };
+		033AE27C1B54EC7A0015EBB0 /* Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = 033AE27B1B54EC7A0015EBB0 /* Demo.m */; };
+		033E05161B5501DC008D501E /* help2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 033E05141B5501DC008D501E /* help2.jpg */; };
+		033E05171B5501DC008D501E /* help1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 033E05151B5501DC008D501E /* help1.jpg */; };
+		033E05181B550348008D501E /* AOCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D25F731B4E4220005BC492 /* AOCocoa.framework */; };
+		033E05191B550348008D501E /* AOCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03D25F731B4E4220005BC492 /* AOCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		035044731B54B0A400404194 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035044721B54B0A400404194 /* AppDelegate.swift */; };
+		035044751B54B0A400404194 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035044741B54B0A400404194 /* MasterViewController.swift */; };
+		035044771B54B0A400404194 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035044761B54B0A400404194 /* DetailViewController.swift */; };
+		0350447A1B54B0A400404194 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 035044781B54B0A400404194 /* Main.storyboard */; };
+		0350447C1B54B0A400404194 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0350447B1B54B0A400404194 /* Images.xcassets */; };
+		0350447F1B54B0A400404194 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0350447D1B54B0A400404194 /* LaunchScreen.xib */; };
+		0350448B1B54B0A400404194 /* AOIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0350448A1B54B0A400404194 /* AOIOSTests.swift */; };
+		035044961B54B1FD00404194 /* AOHelpView.h in Headers */ = {isa = PBXBuildFile; fileRef = 035044941B54B1FD00404194 /* AOHelpView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		035044971B54B1FD00404194 /* AOHelpView.m in Sources */ = {isa = PBXBuildFile; fileRef = 035044951B54B1FD00404194 /* AOHelpView.m */; };
 		03D25F791B4E4220005BC492 /* AOCocoa.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F781B4E4220005BC492 /* AOCocoa.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D25F7F1B4E4220005BC492 /* AOCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D25F731B4E4220005BC492 /* AOCocoa.framework */; };
 		03D25F861B4E4220005BC492 /* AOCocoaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25F851B4E4220005BC492 /* AOCocoaTests.m */; };
@@ -118,6 +133,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		035044851B54B0A400404194 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03D25F6A1B4E4220005BC492 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0350446D1B54B0A400404194;
+			remoteInfo = AOIOS;
+		};
+		035044921B54B0BD00404194 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 03D25F6A1B4E4220005BC492 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 03D25F721B4E4220005BC492;
+			remoteInfo = AOCocoa;
+		};
 		03D25F801B4E4220005BC492 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 03D25F6A1B4E4220005BC492 /* Project object */;
@@ -127,7 +156,40 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		033E051A1B550348008D501E /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				033E05191B550348008D501E /* AOCocoa.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		033AE2771B54D4130015EBB0 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		033AE2791B54EC7A0015EBB0 /* AOIOS-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AOIOS-Bridging-Header.h"; sourceTree = "<group>"; };
+		033AE27A1B54EC7A0015EBB0 /* Demo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Demo.h; sourceTree = "<group>"; };
+		033AE27B1B54EC7A0015EBB0 /* Demo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Demo.m; sourceTree = "<group>"; };
+		033E05141B5501DC008D501E /* help2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = help2.jpg; sourceTree = "<group>"; };
+		033E05151B5501DC008D501E /* help1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = help1.jpg; sourceTree = "<group>"; };
+		0350446E1B54B0A400404194 /* AOIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = AOIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		035044711B54B0A400404194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		035044721B54B0A400404194 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		035044741B54B0A400404194 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		035044761B54B0A400404194 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		035044791B54B0A400404194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0350447B1B54B0A400404194 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		0350447E1B54B0A400404194 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		035044841B54B0A400404194 /* AOIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AOIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		035044891B54B0A400404194 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0350448A1B54B0A400404194 /* AOIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AOIOSTests.swift; sourceTree = "<group>"; };
+		035044941B54B1FD00404194 /* AOHelpView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AOHelpView.h; sourceTree = "<group>"; };
+		035044951B54B1FD00404194 /* AOHelpView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AOHelpView.m; sourceTree = "<group>"; };
 		03D25F731B4E4220005BC492 /* AOCocoa.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = AOCocoa.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		03D25F771B4E4220005BC492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		03D25F781B4E4220005BC492 /* AOCocoa.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AOCocoa.h; sourceTree = "<group>"; };
@@ -245,6 +307,21 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		0350446B1B54B0A400404194 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				033E05181B550348008D501E /* AOCocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		035044811B54B0A400404194 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		03D25F6F1B4E4220005BC492 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -264,12 +341,67 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		033E05131B5501C8008D501E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				033E05141B5501DC008D501E /* help2.jpg */,
+				033E05151B5501DC008D501E /* help1.jpg */,
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
+		0350446F1B54B0A400404194 /* AOIOS */ = {
+			isa = PBXGroup;
+			children = (
+				033E05131B5501C8008D501E /* Images */,
+				035044721B54B0A400404194 /* AppDelegate.swift */,
+				035044741B54B0A400404194 /* MasterViewController.swift */,
+				035044761B54B0A400404194 /* DetailViewController.swift */,
+				035044781B54B0A400404194 /* Main.storyboard */,
+				0350447B1B54B0A400404194 /* Images.xcassets */,
+				0350447D1B54B0A400404194 /* LaunchScreen.xib */,
+				035044701B54B0A400404194 /* Supporting Files */,
+				033AE2771B54D4130015EBB0 /* MenuViewController.swift */,
+				033AE27A1B54EC7A0015EBB0 /* Demo.h */,
+				033AE27B1B54EC7A0015EBB0 /* Demo.m */,
+				033AE2791B54EC7A0015EBB0 /* AOIOS-Bridging-Header.h */,
+			);
+			path = AOIOS;
+			sourceTree = "<group>";
+		};
+		035044701B54B0A400404194 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				035044711B54B0A400404194 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		035044871B54B0A400404194 /* AOIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				0350448A1B54B0A400404194 /* AOIOSTests.swift */,
+				035044881B54B0A400404194 /* Supporting Files */,
+			);
+			path = AOIOSTests;
+			sourceTree = "<group>";
+		};
+		035044881B54B0A400404194 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				035044891B54B0A400404194 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		03D25F691B4E4220005BC492 = {
 			isa = PBXGroup;
 			children = (
 				03D260881B4E473C005BC492 /* Library */,
 				03D25F751B4E4220005BC492 /* AOCocoa */,
 				03D25F821B4E4220005BC492 /* AOCocoaTests */,
+				0350446F1B54B0A400404194 /* AOIOS */,
+				035044871B54B0A400404194 /* AOIOSTests */,
 				03D25F741B4E4220005BC492 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -279,6 +411,8 @@
 			children = (
 				03D25F731B4E4220005BC492 /* AOCocoa.framework */,
 				03D25F7E1B4E4220005BC492 /* AOCocoaTests.xctest */,
+				0350446E1B54B0A400404194 /* AOIOS.app */,
+				035044841B54B0A400404194 /* AOIOSTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -412,6 +546,8 @@
 				03D25FC81B4E428E005BC492 /* FrameView */,
 				03D25FD11B4E428E005BC492 /* SidebarView */,
 				03D25FD81B4E428E005BC492 /* SubmitView */,
+				035044941B54B1FD00404194 /* AOHelpView.h */,
+				035044951B54B1FD00404194 /* AOHelpView.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -559,6 +695,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				035044961B54B1FD00404194 /* AOHelpView.h in Headers */,
 				03D260141B4E428E005BC492 /* NSObject+AOCocoa.h in Headers */,
 				03D2601A1B4E428E005BC492 /* Utils.h in Headers */,
 				03D260501B4E428E005BC492 /* SidebarViewController.h in Headers */,
@@ -620,6 +757,43 @@
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
+		0350446D1B54B0A400404194 /* AOIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 035044901B54B0A400404194 /* Build configuration list for PBXNativeTarget "AOIOS" */;
+			buildPhases = (
+				0350446A1B54B0A400404194 /* Sources */,
+				0350446B1B54B0A400404194 /* Frameworks */,
+				0350446C1B54B0A400404194 /* Resources */,
+				033E051A1B550348008D501E /* Embed Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				035044931B54B0BD00404194 /* PBXTargetDependency */,
+			);
+			name = AOIOS;
+			productName = AOIOS;
+			productReference = 0350446E1B54B0A400404194 /* AOIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		035044831B54B0A400404194 /* AOIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 035044911B54B0A400404194 /* Build configuration list for PBXNativeTarget "AOIOSTests" */;
+			buildPhases = (
+				035044801B54B0A400404194 /* Sources */,
+				035044811B54B0A400404194 /* Frameworks */,
+				035044821B54B0A400404194 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				035044861B54B0A400404194 /* PBXTargetDependency */,
+			);
+			name = AOIOSTests;
+			productName = AOIOSTests;
+			productReference = 035044841B54B0A400404194 /* AOIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 		03D25F721B4E4220005BC492 /* AOCocoa */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 03D25F891B4E4220005BC492 /* Build configuration list for PBXNativeTarget "AOCocoa" */;
@@ -665,9 +839,15 @@
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "刘洪彬";
 				TargetAttributes = {
+					0350446D1B54B0A400404194 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					035044831B54B0A400404194 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 0350446D1B54B0A400404194;
+					};
 					03D25F721B4E4220005BC492 = {
 						CreatedOnToolsVersion = 6.4;
-						DevelopmentTeam = U7764RLDB5;
 					};
 					03D25F7D1B4E4220005BC492 = {
 						CreatedOnToolsVersion = 6.4;
@@ -680,6 +860,7 @@
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 03D25F691B4E4220005BC492;
 			productRefGroup = 03D25F741B4E4220005BC492 /* Products */;
@@ -688,11 +869,32 @@
 			targets = (
 				03D25F721B4E4220005BC492 /* AOCocoa */,
 				03D25F7D1B4E4220005BC492 /* AOCocoaTests */,
+				0350446D1B54B0A400404194 /* AOIOS */,
+				035044831B54B0A400404194 /* AOIOSTests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		0350446C1B54B0A400404194 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0350447A1B54B0A400404194 /* Main.storyboard in Resources */,
+				033E05171B5501DC008D501E /* help1.jpg in Resources */,
+				0350447F1B54B0A400404194 /* LaunchScreen.xib in Resources */,
+				0350447C1B54B0A400404194 /* Images.xcassets in Resources */,
+				033E05161B5501DC008D501E /* help2.jpg in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		035044821B54B0A400404194 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		03D25F711B4E4220005BC492 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -711,6 +913,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		0350446A1B54B0A400404194 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				033AE27C1B54EC7A0015EBB0 /* Demo.m in Sources */,
+				035044771B54B0A400404194 /* DetailViewController.swift in Sources */,
+				035044751B54B0A400404194 /* MasterViewController.swift in Sources */,
+				035044731B54B0A400404194 /* AppDelegate.swift in Sources */,
+				033AE2781B54D4130015EBB0 /* MenuViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		035044801B54B0A400404194 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0350448B1B54B0A400404194 /* AOIOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		03D25F6E1B4E4220005BC492 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -720,6 +942,7 @@
 				03D260771B4E428E005BC492 /* h264utils.m in Sources */,
 				03D260361B4E428E005BC492 /* ArtAlertView.m in Sources */,
 				03D260841B4E428E005BC492 /* SecurityDES.m in Sources */,
+				035044971B54B1FD00404194 /* AOHelpView.m in Sources */,
 				03D2607B1B4E428E005BC492 /* mpegvideo.m in Sources */,
 				03D260681B4E428E005BC492 /* Response.m in Sources */,
 				03D260131B4E428E005BC492 /* NSData+Base64.m in Sources */,
@@ -778,6 +1001,16 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		035044861B54B0A400404194 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0350446D1B54B0A400404194 /* AOIOS */;
+			targetProxy = 035044851B54B0A400404194 /* PBXContainerItemProxy */;
+		};
+		035044931B54B0BD00404194 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03D25F721B4E4220005BC492 /* AOCocoa */;
+			targetProxy = 035044921B54B0BD00404194 /* PBXContainerItemProxy */;
+		};
 		03D25F811B4E4220005BC492 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 03D25F721B4E4220005BC492 /* AOCocoa */;
@@ -785,7 +1018,91 @@
 		};
 /* End PBXTargetDependency section */
 
+/* Begin PBXVariantGroup section */
+		035044781B54B0A400404194 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				035044791B54B0A400404194 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		0350447D1B54B0A400404194 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0350447E1B54B0A400404194 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		0350448C1B54B0A400404194 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AOIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AOIOS/AOIOS-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		0350448D1B54B0A400404194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				INFOPLIST_FILE = AOIOS/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "AOIOS/AOIOS-Bridging-Header.h";
+			};
+			name = Release;
+		};
+		0350448E1B54B0A400404194 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AOIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AOIOS.app/AOIOS";
+			};
+			name = Debug;
+		};
+		0350448F1B54B0A400404194 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = AOIOSTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AOIOS.app/AOIOS";
+			};
+			name = Release;
+		};
 		03D25F871B4E4220005BC492 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -941,6 +1258,24 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		035044901B54B0A400404194 /* Build configuration list for PBXNativeTarget "AOIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0350448C1B54B0A400404194 /* Debug */,
+				0350448D1B54B0A400404194 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		035044911B54B0A400404194 /* Build configuration list for PBXNativeTarget "AOIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0350448E1B54B0A400404194 /* Debug */,
+				0350448F1B54B0A400404194 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		03D25F6D1B4E4220005BC492 /* Build configuration list for PBXProject "AOCocoa" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
