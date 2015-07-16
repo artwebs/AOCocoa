@@ -28,22 +28,11 @@
 
 -(void)drawView
 {
-    
-//    if (![[NSUserDefaultsstandardUserDefaults] boolForKey:@"everLaunched"]) {
-//        
-//        [[NSUserDefaultsstandardUserDefaults] setBool:YES forKey:@"everLaunched"];
-//        
-//        [[NSUserDefaultsstandardUserDefaults] setBool:YES forKey:@"firstLaunch"];
-//        
-//        NSLog(@"first launch");
-//        
-//    }else {
-//        
-//        [[NSUserDefaultsstandardUserDefaults] setBool:NO forKey:@"firstLaunch"];
-//        
-//        NSLog(@"second launch");
-//        
-//    }
+    NSUserDefaults *obj=[NSUserDefaults standardUserDefaults];
+    if ([obj boolForKey:@"AOHelpViewLaunch"]) {
+        [self setHidden:YES];
+        return;
+    }
     if (imageArr) {
         for (int i=(int)imageArr.count-1; i>=0; i--) {
             UIImageView *imageView=[[UIImageView alloc]initWithFrame:self.bounds];
@@ -54,6 +43,9 @@
         }
         [self addTarget:self action:@selector(viewOnClickListener:withEvent:) forControlEvents:UIControlEventTouchUpInside];
     }
+    
+    [obj setBool:YES forKey:@"AOHelpViewLaunch"];
+    [obj synchronize];
 }
 
 -(void)viewOnClickListener:(UIControl *) c withEvent:ev
@@ -62,6 +54,8 @@
         UIImageView *imageView=[viewArr objectAtIndex:viewArr.count-1];
         [imageView removeFromSuperview];
         [viewArr removeObject:imageView];
+    }else{
+        [self setHidden:YES];
     }
 }
 
