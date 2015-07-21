@@ -22,6 +22,14 @@
     self = [super initWithFrame:frame];
     if (self) {
         viewArr=[[NSMutableArray alloc]init];
+        UISwipeGestureRecognizer *recognizer;
+        recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+        [recognizer setDirection:(UISwipeGestureRecognizerDirectionRight)];
+        [self addGestureRecognizer:recognizer];
+        
+        recognizer = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(handleSwipeFrom:)];
+        [recognizer setDirection:(UISwipeGestureRecognizerDirectionLeft)];
+        [self addGestureRecognizer:recognizer];
     }
     return self;
 }
@@ -50,6 +58,24 @@
 
 -(void)viewOnClickListener:(UIControl *) c withEvent:ev
 {
+    [self changeView];
+}
+
+- (IBAction)handleSwipeFrom:(UISwipeGestureRecognizer *)sender
+{
+    if(sender.direction==UISwipeGestureRecognizerDirectionLeft )
+    {
+        
+    } else if(sender.direction==UISwipeGestureRecognizerDirectionRight)
+    {
+        
+    }
+    
+    [self changeView];
+}
+
+-(void)changeView
+{
     if ([[self subviews] count]>0) {
         UIImageView *imageView=[viewArr objectAtIndex:viewArr.count-1];
         [imageView removeFromSuperview];
@@ -58,6 +84,5 @@
         [self setHidden:YES];
     }
 }
-
 
 @end
