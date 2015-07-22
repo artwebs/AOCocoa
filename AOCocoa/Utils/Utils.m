@@ -319,6 +319,50 @@
     return labelSize;
 }
 
++(UIImage *)loadImageCacheWithUrl:(NSString *)urlString defaultImage:(NSString *)imageName
+{
+    NSString *filePath=[Utils documentsPath:@"ImageCatche"];
+    NSString *fileName=[NSString stringWithFormat:@"%@.%@",[Utils base64EncodeWithString:urlString],[urlString pathExtension]];
+    NSFileManager *fm = [NSFileManager defaultManager];
+    if (![fm isReadableFileAtPath:filePath]) {
+        [fm createDirectoryAtPath:filePath withIntermediateDirectories:YES attributes:nil error:nil];
+    }
+    
+    filePath=[filePath stringByAppendingPathComponent:fileName];
+    UIImage *image=nil;
+    if (![fm fileExistsAtPath:filePath])
+    {
+        @try {
+            NSURL *url = [NSURL URLWithString: urlString];
+            NSData *data=[NSData dataWithContentsOfURL:url];
+            if(data!=nil && data.length>1024){
+                [data writeToFile:filePath atomically:YES];
+                image=[UIImage imageWithData:[NSData dataWithContentsOfFile:filePath]];
+            }
+            else if(imageName)
+                image = [UIImage imageNamed:imageName];
+        }
+        @catch (NSException *exception) {
+            NSLog(@"%@",exception);
+        }
+        @finally { }
+    }else{
+        image=[UIImage imageWithData:[NSData dataWithContentsOfFile:filePath]];
+    }
+    return image;
+}
+
+
++(void)loadImageCacheWithUrl:(NSString *)urlString callback:(void(^)(UIImage *))callback
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage *image=[Utils loadImageCacheWithUrl:urlString defaultImage:nil];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            callback(image);
+        });
+    });
+}
+
 
 
 @end

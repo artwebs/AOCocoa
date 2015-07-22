@@ -73,4 +73,7 @@
 + (UIImage *)createImageWithColor:(UIColor *)color rect:(CGRect)rect;
 
 +(CGSize)stringLength:(NSString *)string fontSize:(float)size;
+
++(UIImage *)loadImageCacheWithUrl:(NSString *)urlString defaultImage:(NSString *)imageName;
++(void)loadImageCacheWithUrl:(NSString *)urlString callback:(void(^)(UIImage *))callback;
 @end
