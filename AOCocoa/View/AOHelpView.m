@@ -10,7 +10,7 @@
 #import <UIKit/UIKit.h>
 
 @implementation AOHelpView
-@synthesize imageArr;
+@synthesize imageArr,delegate;
 -(id)initWithCoder:(NSCoder *)aDecoder {
     self=[super initWithCoder:aDecoder];
     return [self initWithFrame:[self frame]];
@@ -39,6 +39,9 @@
     NSUserDefaults *obj=[NSUserDefaults standardUserDefaults];
     if ([obj boolForKey:@"AOHelpViewLaunch"]) {
         [self setHidden:YES];
+        if (delegate) {
+            [delegate jumpOver];
+        }
         return;
     }
     if (imageArr) {
@@ -80,8 +83,12 @@
         UIImageView *imageView=[viewArr objectAtIndex:viewArr.count-1];
         [imageView removeFromSuperview];
         [viewArr removeObject:imageView];
-    }else{
-        [self setHidden:YES];
+        if ([[self subviews] count]==0) {
+            [self setHidden:YES];
+            if (delegate) {
+                [delegate showOver];
+            }
+        }
     }
 }
 
