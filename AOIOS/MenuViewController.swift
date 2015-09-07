@@ -46,6 +46,10 @@ class MenuViewController: UIViewController,AOHelpViewDelegate{
             loadImageView.image=image
         })
         self.view.addSubview(loadImageView)
+//        var str : String = "yxXinhuashe://"
+//        str = str.stringByAddingPercentEscapesUsingEncoding(NSUTF8StringEncoding)
+//        let nsurl = NSURL.URLWithString(str)
+        UIApplication.sharedApplication().openURL(NSURL(string:"yxXinhuashe://")!)
     }
     
 }
