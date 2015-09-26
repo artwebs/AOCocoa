@@ -159,7 +159,7 @@ static NSString *tag=@"IServiceHttpSync";
     res = [[NSString alloc] initWithData:mResponseData encoding:NSUTF8StringEncoding];
     
     if([urlResponese statusCode] >=200&&[urlResponese statusCode]<300){
-        NSLog(@"返回结果=====%@",res);
+//        NSLog(@"返回结果=====%@",res);
         return res;
     }
     /*
@@ -174,7 +174,7 @@ static NSString *tag=@"IServiceHttpSync";
      }else{
      res = [[NSString alloc] init];
      }*/
-    NSLog(@"服务器返回：%@", res);
+//    NSLog(@"服务器返回：%@", res);
     return nil;
 
 }
