@@ -11,8 +11,6 @@
 		033AE27C1B54EC7A0015EBB0 /* Demo.m in Sources */ = {isa = PBXBuildFile; fileRef = 033AE27B1B54EC7A0015EBB0 /* Demo.m */; };
 		033E05161B5501DC008D501E /* help2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 033E05141B5501DC008D501E /* help2.jpg */; };
 		033E05171B5501DC008D501E /* help1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 033E05151B5501DC008D501E /* help1.jpg */; };
-		033E05181B550348008D501E /* AOCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D25F731B4E4220005BC492 /* AOCocoa.framework */; };
-		033E05191B550348008D501E /* AOCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03D25F731B4E4220005BC492 /* AOCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		035044731B54B0A400404194 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035044721B54B0A400404194 /* AppDelegate.swift */; };
 		035044751B54B0A400404194 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035044741B54B0A400404194 /* MasterViewController.swift */; };
 		035044771B54B0A400404194 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 035044761B54B0A400404194 /* DetailViewController.swift */; };
@@ -129,7 +127,10 @@
 		03D260821B4E428E005BC492 /* Security.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2600E1B4E428E005BC492 /* Security.m */; };
 		03D260831B4E428E005BC492 /* SecurityDES.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D2600F1B4E428E005BC492 /* SecurityDES.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260841B4E428E005BC492 /* SecurityDES.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D260101B4E428E005BC492 /* SecurityDES.m */; };
-		03D260871B4E4345005BC492 /* libsqlite3.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D260861B4E4345005BC492 /* libsqlite3.dylib */; };
+		439F26A41BBBAFCA00A19B71 /* AOCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D25F731B4E4220005BC492 /* AOCocoa.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		439F26A51BBBAFCA00A19B71 /* AOCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03D25F731B4E4220005BC492 /* AOCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		439F26A81BBBB0F500A19B71 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 439F26A71BBBB0F500A19B71 /* libsqlite3.tbd */; };
+		439F26A91BBBB41A00A19B71 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 439F26A71BBBB0F500A19B71 /* libsqlite3.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,14 +141,14 @@
 			remoteGlobalIDString = 0350446D1B54B0A400404194;
 			remoteInfo = AOIOS;
 		};
-		035044921B54B0BD00404194 /* PBXContainerItemProxy */ = {
+		03D25F801B4E4220005BC492 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 03D25F6A1B4E4220005BC492 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 03D25F721B4E4220005BC492;
 			remoteInfo = AOCocoa;
 		};
-		03D25F801B4E4220005BC492 /* PBXContainerItemProxy */ = {
+		439F26A21BBBAFA600A19B71 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 03D25F6A1B4E4220005BC492 /* Project object */;
 			proxyType = 1;
@@ -157,13 +158,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
-		033E051A1B550348008D501E /* Embed Frameworks */ = {
+		439F26A61BBBAFCA00A19B71 /* Embed Frameworks */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				033E05191B550348008D501E /* AOCocoa.framework in Embed Frameworks */,
+				439F26A51BBBAFCA00A19B71 /* AOCocoa.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -303,7 +304,7 @@
 		03D2600F1B4E428E005BC492 /* SecurityDES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityDES.h; sourceTree = "<group>"; };
 		03D260101B4E428E005BC492 /* SecurityDES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityDES.m; sourceTree = "<group>"; };
 		03D260111B4E428E005BC492 /* SecurityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityTests.m; sourceTree = "<group>"; };
-		03D260861B4E4345005BC492 /* libsqlite3.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libsqlite3.dylib; path = usr/lib/libsqlite3.dylib; sourceTree = SDKROOT; };
+		439F26A71BBBB0F500A19B71 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -311,7 +312,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				033E05181B550348008D501E /* AOCocoa.framework in Frameworks */,
+				439F26A91BBBB41A00A19B71 /* libsqlite3.tbd in Frameworks */,
+				439F26A41BBBAFCA00A19B71 /* AOCocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -326,7 +328,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				03D260871B4E4345005BC492 /* libsqlite3.dylib in Frameworks */,
+				439F26A81BBBB0F500A19B71 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -683,7 +685,7 @@
 		03D260881B4E473C005BC492 /* Library */ = {
 			isa = PBXGroup;
 			children = (
-				03D260861B4E4345005BC492 /* libsqlite3.dylib */,
+				439F26A71BBBB0F500A19B71 /* libsqlite3.tbd */,
 			);
 			name = Library;
 			sourceTree = "<group>";
@@ -764,12 +766,12 @@
 				0350446A1B54B0A400404194 /* Sources */,
 				0350446B1B54B0A400404194 /* Frameworks */,
 				0350446C1B54B0A400404194 /* Resources */,
-				033E051A1B550348008D501E /* Embed Frameworks */,
+				439F26A61BBBAFCA00A19B71 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				035044931B54B0BD00404194 /* PBXTargetDependency */,
+				439F26A31BBBAFA600A19B71 /* PBXTargetDependency */,
 			);
 			name = AOIOS;
 			productName = AOIOS;
@@ -842,6 +844,7 @@
 				TargetAttributes = {
 					0350446D1B54B0A400404194 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = U7764RLDB5;
 					};
 					035044831B54B0A400404194 = {
 						CreatedOnToolsVersion = 6.4;
@@ -1007,15 +1010,15 @@
 			target = 0350446D1B54B0A400404194 /* AOIOS */;
 			targetProxy = 035044851B54B0A400404194 /* PBXContainerItemProxy */;
 		};
-		035044931B54B0BD00404194 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 03D25F721B4E4220005BC492 /* AOCocoa */;
-			targetProxy = 035044921B54B0BD00404194 /* PBXContainerItemProxy */;
-		};
 		03D25F811B4E4220005BC492 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 03D25F721B4E4220005BC492 /* AOCocoa */;
 			targetProxy = 03D25F801B4E4220005BC492 /* PBXContainerItemProxy */;
+		};
+		439F26A31BBBAFA600A19B71 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 03D25F721B4E4220005BC492 /* AOCocoa */;
+			targetProxy = 439F26A21BBBAFA600A19B71 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1043,6 +1046,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PREPROCESSOR_DEFINITIONS = (
@@ -1061,6 +1065,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AOIOS/Info.plist;
@@ -1108,6 +1113,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1155,6 +1161,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
@@ -1195,6 +1202,7 @@
 		03D25F8A1B4E4220005BC492 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
@@ -1212,6 +1220,7 @@
 		03D25F8B1B4E4220005BC492 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;

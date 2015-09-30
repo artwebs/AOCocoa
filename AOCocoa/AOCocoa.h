@@ -29,8 +29,8 @@ FOUNDATION_EXPORT const unsigned char AOCocoaVersionString[];
 #import <AOCocoa/RData.h>
 #import <AOCocoa/RemoteFactory.h>
 #import <AOCocoa/Response.h>
-#import <AOCocoa/SimpleTable.h>
-#import <AOCocoa/SqliteHelper.h>
+//#import <AOCocoa/SimpleTable.h>
+//#import <AOCocoa/SqliteHelper.h>
 
 
 
