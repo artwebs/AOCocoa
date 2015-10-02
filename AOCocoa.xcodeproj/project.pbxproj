@@ -852,6 +852,7 @@
 					};
 					03D25F721B4E4220005BC492 = {
 						CreatedOnToolsVersion = 6.4;
+						DevelopmentTeam = U7764RLDB5;
 					};
 					03D25F7D1B4E4220005BC492 = {
 						CreatedOnToolsVersion = 6.4;

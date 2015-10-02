@@ -32,9 +32,6 @@ class MenuViewController: UIViewController,AOHelpViewDelegate{
         log("showOver")
         var loadImageView: UIImageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
         loadImageView.image=UIImage(contentsOfFile: "help1.jpg")
-        Utils.loadImageCacheWithUrl("http://www.xhynt.com/xinhuasheapp-management/area_android_img/530000.jpg", callback: { (image) -> Void in
-            loadImageView.image=image
-        })
         self.view.addSubview(loadImageView)
     }
     
@@ -42,6 +39,7 @@ class MenuViewController: UIViewController,AOHelpViewDelegate{
         log("jumpOver")
         var loadImageView: UIImageView = UIImageView(frame: CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height))
         loadImageView.image=UIImage(contentsOfFile: "help1.jpg")
+        Utils.loadImageCacheWithUrl("http://p8.sinaimg.cn/2616357583/180/28581331033729", defaultImage: nil, expireInterval: 1)
         Utils.loadImageCacheWithUrl("http://www.xhynt.com/xinhuasheapp-management/area_android_img/530000.jpg", callback: { (image) -> Void in
             loadImageView.image=image
         })

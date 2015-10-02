@@ -76,4 +76,5 @@
 
 +(UIImage *)loadImageCacheWithUrl:(NSString *)urlString defaultImage:(NSString *)imageName;
 +(void)loadImageCacheWithUrl:(NSString *)urlString callback:(void(^)(UIImage *))callback;
++(UIImage *)loadImageCacheWithUrl:(NSString *)urlString defaultImage:(NSString *)imageName expireInterval:(long) interval;
 @end

@@ -319,7 +319,23 @@
     return labelSize;
 }
 
-+(UIImage *)loadImageCacheWithUrl:(NSString *)urlString defaultImage:(NSString *)imageName
+
++(UIImage *)loadImageCacheWithUrl:(NSString *)urlString defaultImage:(NSString *)imageName{
+    return [Utils loadImageCacheWithUrl:urlString defaultImage:imageName expireInterval:0];
+}
+
++(void)loadImageCacheWithUrl:(NSString *)urlString callback:(void(^)(UIImage *))callback
+{
+    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
+        UIImage *image=[Utils loadImageCacheWithUrl:urlString defaultImage:nil expireInterval:0];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            callback(image);
+        });
+    });
+}
+
+
++(UIImage *)loadImageCacheWithUrl:(NSString *)urlString defaultImage:(NSString *)imageName expireInterval:(long) interval
 {
     NSString *filePath=[Utils documentsPath:@"ImageCatche"];
     NSString *fileName=[NSString stringWithFormat:@"%@.%@",[Utils base64EncodeWithString:urlString],[urlString pathExtension]];
@@ -329,6 +345,15 @@
     }
     
     filePath=[filePath stringByAppendingPathComponent:fileName];
+    NSDictionary *fileAttributes = [fm fileAttributesAtPath:filePath traverseLink:YES];
+    NSDate *creationDate = [fileAttributes objectForKey:NSFileCreationDate];
+    if (interval>0&&creationDate) {
+        NSCalendar *gregorian = [[NSCalendar alloc] initWithCalendarIdentifier:NSGregorianCalendar];
+        NSDateComponents *comps = [gregorian components:NSCalendarUnitSecond fromDate:creationDate toDate:[NSDate date] options:0];
+        if ([comps second]>interval) {
+            [fm removeItemAtPath:filePath error:nil];
+        }
+    }
     UIImage *image=nil;
     if (![fm fileExistsAtPath:filePath])
     {
@@ -353,15 +378,6 @@
 }
 
 
-+(void)loadImageCacheWithUrl:(NSString *)urlString callback:(void(^)(UIImage *))callback
-{
-    dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
-        UIImage *image=[Utils loadImageCacheWithUrl:urlString defaultImage:nil];
-        dispatch_async(dispatch_get_main_queue(), ^{
-            callback(image);
-        });
-    });
-}
 
 
 
