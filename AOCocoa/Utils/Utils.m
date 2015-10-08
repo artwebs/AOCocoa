@@ -319,6 +319,10 @@
     return labelSize;
 }
 
++(void)clearCatche{
+    [[NSFileManager defaultManager] removeItemAtPath:[Utils documentsPath:@"ImageCatche"] error:nil];
+}
+
 
 +(UIImage *)loadImageCacheWithUrl:(NSString *)urlString defaultImage:(NSString *)imageName{
     return [Utils loadImageCacheWithUrl:urlString defaultImage:imageName expireInterval:0];
@@ -333,7 +337,6 @@
         });
     });
 }
-
 
 +(UIImage *)loadImageCacheWithUrl:(NSString *)urlString defaultImage:(NSString *)imageName expireInterval:(long) interval
 {
@@ -362,7 +365,7 @@
             NSData *data=[NSData dataWithContentsOfURL:url];
             if(data!=nil && data.length>1024){
                 [data writeToFile:filePath atomically:YES];
-                image=[UIImage imageWithData:[NSData dataWithContentsOfFile:filePath]];
+                image=[UIImage imageWithData:data];
             }
             else if(imageName)
                 image = [UIImage imageNamed:imageName];
