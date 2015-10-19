@@ -62,6 +62,8 @@
 +(NSString *)toString:(NSObject *)obj default:(NSString *)dValue;
 
 +(UIImage *) imageWithImageSimple:(UIImage*)image scaledToSize:(CGSize) newSize;
+
++ (UIImage *)readImage:(NSString *)imageName;
 +(NSString *)saveImage:(UIImage *)tempImage WithName:(NSString *)imageName;
 
 +(void)callPhone:(NSString *)phone;
@@ -78,4 +80,9 @@
 +(UIImage *)loadImageCacheWithUrl:(NSString *)urlString defaultImage:(NSString *)imageName;
 +(void)loadImageCacheWithUrl:(NSString *)urlString callback:(void(^)(UIImage *))callback;
 +(UIImage *)loadImageCacheWithUrl:(NSString *)urlString defaultImage:(NSString *)imageName expireInterval:(long) interval;
+
++(UIImage*)captureView:(UIView *)theView frame:(CGRect)fra;
+
++ (NSString *) localIPAddress;
++ (NSString *) localWiFiIPAddress;
 @end

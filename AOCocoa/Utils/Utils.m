@@ -20,7 +20,9 @@
 //
 
 #import "Utils.h"
-
+#include <ifaddrs.h>
+#include <arpa/inet.h>
+#include <net/if.h>
 
 @implementation Utils
 
@@ -243,18 +245,26 @@
         //返回为JPEG图像。
         imageData = UIImageJPEGRepresentation(tempImage, 1.0);
     }
-    NSArray* paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory,NSUserDomainMask,YES);
     
-    NSString* documentsDirectory = [paths objectAtIndex:0];
+    NSString *filePath=[Utils documentsPath:@"ImageCatche"];
+    NSString *fileName=[NSString stringWithFormat:@"%@.%@",[Utils base64EncodeWithString:imageName],[imageName pathExtension]];
+    NSFileManager *fm = [NSFileManager defaultManager];
+    if (![fm isReadableFileAtPath:filePath]) {
+        [fm createDirectoryAtPath:filePath withIntermediateDirectories:YES attributes:nil error:nil];
+    }
     
-    NSString* fullPathToFile = [documentsDirectory stringByAppendingPathComponent:imageName];
-    
-    NSArray *nameAry=[fullPathToFile componentsSeparatedByString:@"/"];
-    NSLog(@"===fullPathToFile===%@",fullPathToFile);
-    NSLog(@"===FileName===%@",[nameAry objectAtIndex:[nameAry count]-1]);
-    
-    [imageData writeToFile:fullPathToFile atomically:NO];
-    return fullPathToFile;
+    filePath=[filePath stringByAppendingPathComponent:fileName];
+    [fm removeItemAtPath:filePath error:nil];
+    [imageData writeToFile:filePath atomically:NO];
+    return filePath;
+}
+
++ (UIImage *)readImage:(NSString *)imageName{
+    NSString *filePath=[Utils documentsPath:@"ImageCatche"];
+    NSString *fileName=[NSString stringWithFormat:@"%@.%@",[Utils base64EncodeWithString:imageName],[imageName pathExtension]];
+    filePath=[filePath stringByAppendingPathComponent:fileName];
+//    NSLog(@"%@=>%@",self,filePath);
+    return [UIImage imageWithContentsOfFile:filePath];
 }
 
 +(void)callPhone:(NSString *)phone
@@ -381,7 +391,78 @@
 }
 
 
++(UIImage*)captureView:(UIView *)theView frame:(CGRect)fra{
+    UIGraphicsBeginImageContext(theView.frame.size);
+    CGContextRef context = UIGraphicsGetCurrentContext();
+    [theView.layer renderInContext:context];
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    UIGraphicsEndImageContext();
+    CGImageRef ref = CGImageCreateWithImageInRect(img.CGImage, fra);
+    UIImage *i = [UIImage imageWithCGImage:ref];
+    CGImageRelease(ref);
+    return i;
+}
 
++ (NSString *)localIPAddress
+{
+    NSString *address;
+    struct ifaddrs *interfaces = NULL;
+    struct ifaddrs *temp_addr = NULL;
+    int success = 0;
+    
+    // retrieve the current interfaces - returns 0 on success
+    success = getifaddrs(&interfaces);
+    if (success == 0)
+    {
+        // Loop through linked list of interfaces
+        temp_addr = interfaces;
+        while(temp_addr != NULL)
+        {
+            if(temp_addr->ifa_addr->sa_family == AF_INET)
+            {
+                NSString *tmp=[NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
+                // Check if interface is en0 which is the wifi connection on the iPhone
+                if(tmp&&![tmp isEqualToString:@"127.0.0.1"])
+                {
+                    // Get NSString from C String
+                    address = [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)temp_addr->ifa_addr)->sin_addr)];
+                    break;
+                }
+            }
+            
+            temp_addr = temp_addr->ifa_next;
+        }
+    }
+    
+    // Free memory
+    freeifaddrs(interfaces);
+    
+    return address;
+}
+
++ (NSString *) localWiFiIPAddress
+{
+    BOOL success;
+    struct ifaddrs * addrs;
+    const struct ifaddrs * cursor;
+    
+    success = getifaddrs(&addrs) == 0;
+    if (success) {
+        cursor = addrs;
+        while (cursor != NULL) {
+            // the second test keeps from picking up the loopback address
+            if (cursor->ifa_addr->sa_family == AF_INET && (cursor->ifa_flags & IFF_LOOPBACK) == 0)
+            {
+                NSString *name = [NSString stringWithUTF8String:cursor->ifa_name];
+                if ([name isEqualToString:@"en0"])  // Wi-Fi adapter
+                    return [NSString stringWithUTF8String:inet_ntoa(((struct sockaddr_in *)cursor->ifa_addr)->sin_addr)];
+            }
+            cursor = cursor->ifa_next;
+        }
+        freeifaddrs(addrs);
+    }
+    return nil;
+}
 
 
 @end
