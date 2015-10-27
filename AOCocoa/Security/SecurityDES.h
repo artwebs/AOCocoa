@@ -7,7 +7,6 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <CommonCrypto/CommonCryptor.h>
 #import "Security.h"
 typedef enum MODEL{
     ECB=0x0002,CBC=0x0000,PKCS7=0x0001

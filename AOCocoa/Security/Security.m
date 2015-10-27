@@ -8,6 +8,7 @@
 
 #import "Security.h"
 #import "ArtLog.h"
+#import <CommonCrypto/CommonCryptor.h>
 @implementation Security
 -(id)initWithKeySize:(int)kSize blockSize:(int)bSize
 {

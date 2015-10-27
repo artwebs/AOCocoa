@@ -9,7 +9,9 @@
 #import "SqliteHelper.h"
 #import <sqlite3.h>
 #import "ArtLog.h"
-@interface SqliteHelper()
+@interface SqliteHelper(){
+     sqlite3 *db;
+}
 -(int)getCurVersion;
 @end
 

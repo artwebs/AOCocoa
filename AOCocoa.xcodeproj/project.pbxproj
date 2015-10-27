@@ -127,6 +127,7 @@
 		03D260821B4E428E005BC492 /* Security.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2600E1B4E428E005BC492 /* Security.m */; };
 		03D260831B4E428E005BC492 /* SecurityDES.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D2600F1B4E428E005BC492 /* SecurityDES.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260841B4E428E005BC492 /* SecurityDES.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D260101B4E428E005BC492 /* SecurityDES.m */; };
+		4306169B1BD62D9C00399932 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4306169A1BD62D9C00399932 /* SystemConfiguration.framework */; };
 		439F26A41BBBAFCA00A19B71 /* AOCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D25F731B4E4220005BC492 /* AOCocoa.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		439F26A51BBBAFCA00A19B71 /* AOCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03D25F731B4E4220005BC492 /* AOCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		439F26A81BBBB0F500A19B71 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 439F26A71BBBB0F500A19B71 /* libsqlite3.tbd */; };
@@ -304,6 +305,7 @@
 		03D2600F1B4E428E005BC492 /* SecurityDES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityDES.h; sourceTree = "<group>"; };
 		03D260101B4E428E005BC492 /* SecurityDES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityDES.m; sourceTree = "<group>"; };
 		03D260111B4E428E005BC492 /* SecurityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityTests.m; sourceTree = "<group>"; };
+		4306169A1BD62D9C00399932 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		439F26A71BBBB0F500A19B71 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -328,6 +330,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4306169B1BD62D9C00399932 /* SystemConfiguration.framework in Frameworks */,
 				439F26A81BBBB0F500A19B71 /* libsqlite3.tbd in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -685,6 +688,7 @@
 		03D260881B4E473C005BC492 /* Library */ = {
 			isa = PBXGroup;
 			children = (
+				4306169A1BD62D9C00399932 /* SystemConfiguration.framework */,
 				439F26A71BBBB0F500A19B71 /* libsqlite3.tbd */,
 			);
 			name = Library;
@@ -714,7 +718,6 @@
 				03D260531B4E428E005BC492 /* ArtSubmitControl.h in Headers */,
 				03D2602A1B4E428E005BC492 /* RTPUnpackage.h in Headers */,
 				03D2603B1B4E428E005BC492 /* ArtEditView.h in Headers */,
-				03D260311B4E428E005BC492 /* SqliteHelper.h in Headers */,
 				03D260571B4E428E005BC492 /* ArtSubmitViewCellButton.h in Headers */,
 				03D2601E1B4E428E005BC492 /* AOSocket.h in Headers */,
 				03D260451B4E428E005BC492 /* ArtFrameCellView.h in Headers */,
@@ -722,7 +725,6 @@
 				03D260181B4E428E005BC492 /* NSData+Base64.h in Headers */,
 				03D260641B4E428E005BC492 /* RemoteFactory.h in Headers */,
 				03D2607F1B4E428E005BC492 /* ArtLog.h in Headers */,
-				03D2602F1B4E428E005BC492 /* SimpleTable.h in Headers */,
 				03D2605D1B4E428E005BC492 /* IService.h in Headers */,
 				03D260391B4E428E005BC492 /* ArtCircleProcessView.h in Headers */,
 				03D260671B4E428E005BC492 /* Response.h in Headers */,
@@ -732,12 +734,14 @@
 				03D2603D1B4E428E005BC492 /* ArtListControlPage.h in Headers */,
 				03D260621B4E428E005BC492 /* RData.h in Headers */,
 				03D260591B4E428E005BC492 /* AddressBook.h in Headers */,
-				03D260831B4E428E005BC492 /* SecurityDES.h in Headers */,
 				03D260431B4E428E005BC492 /* DicListView.h in Headers */,
-				03D260811B4E428E005BC492 /* Security.h in Headers */,
 				03D2605B1B4E428E005BC492 /* AsyncRemoteOperation.h in Headers */,
 				03D260411B4E428E005BC492 /* ArtView.h in Headers */,
 				03D260551B4E428E005BC492 /* ArtSubmitViewCell.h in Headers */,
+				03D260831B4E428E005BC492 /* SecurityDES.h in Headers */,
+				03D260811B4E428E005BC492 /* Security.h in Headers */,
+				03D2602F1B4E428E005BC492 /* SimpleTable.h in Headers */,
+				03D260311B4E428E005BC492 /* SqliteHelper.h in Headers */,
 				03D260691B4E428E005BC492 /* ServiceTask.h in Headers */,
 				03D260281B4E428E005BC492 /* Base64.h in Headers */,
 				03D2607E1B4E428E005BC492 /* SubPackageListener.h in Headers */,
