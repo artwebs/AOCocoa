@@ -33,11 +33,11 @@
 		03D260191B4E428E005BC492 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25F981B4E428E005BC492 /* NSData+Base64.m */; };
 		03D2601A1B4E428E005BC492 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F991B4E428E005BC492 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D2601B1B4E428E005BC492 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25F9A1B4E428E005BC492 /* Utils.m */; };
-		03D2601E1B4E428E005BC492 /* AOSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F9E1B4E428E005BC492 /* AOSocket.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03D2601E1B4E428E005BC492 /* AOSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F9E1B4E428E005BC492 /* AOSocket.h */; };
 		03D2601F1B4E428E005BC492 /* AOSocket.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03D25F9F1B4E428E005BC492 /* AOSocket.mm */; };
 		03D260281B4E428E005BC492 /* Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FA91B4E428E005BC492 /* Base64.h */; };
 		03D260291B4E428E005BC492 /* Base64.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FAA1B4E428E005BC492 /* Base64.mm */; };
-		03D2602A1B4E428E005BC492 /* RTPUnpackage.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FAB1B4E428E005BC492 /* RTPUnpackage.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03D2602A1B4E428E005BC492 /* RTPUnpackage.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FAB1B4E428E005BC492 /* RTPUnpackage.h */; };
 		03D2602B1B4E428E005BC492 /* RTPUnpackage.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FAC1B4E428E005BC492 /* RTPUnpackage.mm */; };
 		03D2602C1B4E428E005BC492 /* RtspClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FAD1B4E428E005BC492 /* RtspClient.h */; };
 		03D2602D1B4E428E005BC492 /* RtspClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FAE1B4E428E005BC492 /* RtspClient.mm */; };
@@ -716,10 +716,8 @@
 				03D260491B4E428E005BC492 /* ArtFramePlayView.h in Headers */,
 				03D2604D1B4E428E005BC492 /* SidebarMenuViewController.h in Headers */,
 				03D260531B4E428E005BC492 /* ArtSubmitControl.h in Headers */,
-				03D2602A1B4E428E005BC492 /* RTPUnpackage.h in Headers */,
 				03D2603B1B4E428E005BC492 /* ArtEditView.h in Headers */,
 				03D260571B4E428E005BC492 /* ArtSubmitViewCellButton.h in Headers */,
-				03D2601E1B4E428E005BC492 /* AOSocket.h in Headers */,
 				03D260451B4E428E005BC492 /* ArtFrameCellView.h in Headers */,
 				03D2605E1B4E428E005BC492 /* IServiceHttp.h in Headers */,
 				03D260181B4E428E005BC492 /* NSData+Base64.h in Headers */,
@@ -744,6 +742,8 @@
 				03D260311B4E428E005BC492 /* SqliteHelper.h in Headers */,
 				03D260691B4E428E005BC492 /* ServiceTask.h in Headers */,
 				03D260281B4E428E005BC492 /* Base64.h in Headers */,
+				03D2602A1B4E428E005BC492 /* RTPUnpackage.h in Headers */,
+				03D2601E1B4E428E005BC492 /* AOSocket.h in Headers */,
 				03D2607E1B4E428E005BC492 /* SubPackageListener.h in Headers */,
 				03D260761B4E428E005BC492 /* h264data.h in Headers */,
 				03D2607A1B4E428E005BC492 /* mpegvideo.h in Headers */,
