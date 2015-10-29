@@ -10,8 +10,12 @@
 static BOOL isDebugger_NSObject_AOCocoa = false;
 @implementation NSObject(AOCocoa)
 
--(void)isDebugger:(BOOL)flag{
+-(void)setDebugger:(BOOL)flag{
     isDebugger_NSObject_AOCocoa =flag;
+}
+
+-(BOOL)isDebugger{
+    return isDebugger_NSObject_AOCocoa;
 }
 
 -(void)log:(NSObject *)obj{

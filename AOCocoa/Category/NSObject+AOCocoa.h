@@ -11,7 +11,8 @@
 @interface NSObject(AOCocoa)
 -(void)log:(NSObject *)obj;
 -(NSString *)tag;
--(void)isDebugger:(BOOL)flag;
+-(void)setDebugger:(BOOL)flag;
+-(BOOL)isDebugger;
 @end
 
 @interface NSObject_AOCocoa
