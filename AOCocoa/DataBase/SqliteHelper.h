@@ -17,8 +17,8 @@
 
 -(id)initWithName:(NSString *)name;
 -(void)initDataWithVersion:(int)version;
-//-(void)onCreateWithSqlite:(sqlite3 *)newdb;
-//-(void)onUpdateWithSqlite:(sqlite3 *)newdb oldVersion:(int)oldVer newVersion:(int)newVer;
+-(void)onCreateWithSqlite;
+-(void)onUpdateWithSqlite:(int)oldVer newVersion:(int)newVer;
 -(BOOL)conn;
 -(void)closeConn;
 -(BOOL)execWithSql:(NSString *)sql;

@@ -9,6 +9,7 @@
 #import "SqliteHelper.h"
 #import <sqlite3.h>
 #import "ArtLog.h"
+#import "NSObject+AOCocoa.h"
 @interface SqliteHelper(){
      sqlite3 *db;
 }
@@ -29,21 +30,21 @@
 -(void)initDataWithVersion:(int)version
 {
     dbVersion=version;
-    [self onCreateWithSqlite:db];
+    [self onCreateWithSqlite];
     curVersion=[self getCurVersion];
     if (curVersion<dbVersion) {
-        [self onUpdateWithSqlite:db oldVersion:curVersion newVersion:dbVersion];
+        [self onUpdateWithSqlite:curVersion newVersion:dbVersion];
         [self execWithSql:[NSString stringWithFormat:@"PRAGMA user_version=%d",dbVersion]];
         curVersion=dbVersion;
     }
 }
 
--(void)onCreateWithSqlite:(sqlite3 *)newdb
+-(void)onCreateWithSqlite
 {
     
 }
 
--(void)onUpdateWithSqlite:(sqlite3 *)newdb oldVersion:(int)oldVer newVersion:(int)newVer
+-(void)onUpdateWithSqlite:(int)oldVer newVersion:(int)newVer
 {
 
 }
@@ -80,7 +81,7 @@
         NSLog(@"数据库操作数据失败!");
     }
     [self closeConn];
-    [ArtLog warnWithTag:@"SqliteHelper" object:[NSString stringWithFormat:@"%@=>%d",sql,rs]];
+    [self log:[NSString stringWithFormat:@"%@=>%d",sql,rs]];
     return rs;
 }
 
@@ -105,7 +106,7 @@
         sql=[sql stringByAppendingString:@" where "];
         sql=[sql stringByAppendingString:where];
     }
-    [ArtLog warnWithTag:@"SqliteHelper" object:sql];
+    [self log:sql];
     if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, nil) == SQLITE_OK) {
         while (sqlite3_step(stmt) == SQLITE_ROW) {
             NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];

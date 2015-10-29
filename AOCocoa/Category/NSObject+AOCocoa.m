@@ -7,10 +7,17 @@
 //
 
 #import "NSObject+AOCocoa.h"
-
+static BOOL isDebugger_NSObject_AOCocoa = false;
 @implementation NSObject(AOCocoa)
+
+-(void)isDebugger:(BOOL)flag{
+    isDebugger_NSObject_AOCocoa =flag;
+}
+
 -(void)log:(NSObject *)obj{
-    NSLog(@"%@=>%@",[self tag],obj);
+    if (isDebugger_NSObject_AOCocoa) {
+        NSLog(@"%@=>%@",[self tag],obj);
+    }
 }
 
 -(NSString *)tag{

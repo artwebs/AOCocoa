@@ -8,43 +8,53 @@
 
 #import "ArtLog.h"
 #import "Utils.h"
-ArtLogLevel level=INFO;
-static NSString *t=@"";
+ArtLogLevel levelArtLogLevel=INFO;
+static NSMutableArray *dataArtLog;
 @implementation ArtLog
 +(void)infoWithTag:(NSString *)tag object:(NSObject *)meg
 {
-    if (level<=INFO&&([[ArtLog filterOjbects] containsObject:tag]||[[ArtLog filterOjbects] count]==0)) {
+    if (levelArtLogLevel<=INFO&&([[ArtLog filterOjbects] containsObject:tag]||[[ArtLog filterOjbects] count]==0)) {
         NSLog(@"[%@]=> %@",tag,meg);
     }
 }
 +(void)warnWithTag:(NSString *)tag object:(NSObject *)meg
 {
-    if (level<=WARN&&([[ArtLog filterOjbects] containsObject:tag]||[[ArtLog filterOjbects] count]==0)) {
+    if (levelArtLogLevel<=WARN&&([[ArtLog filterOjbects] containsObject:tag]||[[ArtLog filterOjbects] count]==0)) {
         NSLog(@"[%@]=> %@",tag,meg);
     }
 }
 +(void)errorWithTag:(NSString *)tag object:(NSObject *)meg
 {
-    if (level<=ERROR&&([[ArtLog filterOjbects] containsObject:tag]||[[ArtLog filterOjbects] count]==0)) {
+    if (levelArtLogLevel<=ERROR&&([[ArtLog filterOjbects] containsObject:tag]||[[ArtLog filterOjbects] count]==0)) {
         NSLog(@"[%@]=> %@",tag,meg);
     }
 }
 
++(void)setLevel:(ArtLogLevel)l{
+    levelArtLogLevel = l;
+}
+
++(void)addObject:(NSString *)obj{
+    if (!dataArtLog) {
+        dataArtLog = [[NSMutableArray alloc]init];
+    }
+    [dataArtLog addObject:obj];
+}
+
++(void)setObjects:(NSArray *)arr{
+    if (!dataArtLog) {
+        dataArtLog = [[NSMutableArray alloc]init];
+    }
+    [dataArtLog removeAllObjects];
+    [dataArtLog addObjectsFromArray:arr];
+}
+
 +(NSArray *)filterOjbects
 {
-    return @[
-//             @"ReviewCellView",
-//             @"MenuViewController",
-//             @"SPSubmitViewController",
-//             @"SPModifyViewController",
-//             @"SubmitPickCellVIew",
-//             @"SearchView",
-//             @"SPickViewController",
-//             @"ArtSubmitControl",
-//             @"SDoReviewViewController",
-//             @"LoginViewController",
-//             @"SQueryReviewViewController"
-             ];
+    if (dataArtLog) {
+        return dataArtLog;
+    }
+    return @[];
 }
 
 @end
