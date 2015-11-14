@@ -81,7 +81,7 @@
         NSLog(@"数据库操作数据失败!");
     }
     [self closeConn];
-    [self log:[NSString stringWithFormat:@"%@=>%d",sql,rs]];
+    [self log:[NSString stringWithFormat:@"%@=>%d",sql,rs],nil];
     return rs;
 }
 
@@ -106,7 +106,7 @@
         sql=[sql stringByAppendingString:@" where "];
         sql=[sql stringByAppendingString:where];
     }
-    [self log:sql];
+    [self log:sql,nil];
     if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, nil) == SQLITE_OK) {
         while (sqlite3_step(stmt) == SQLITE_ROW) {
             NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];

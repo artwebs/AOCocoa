@@ -18,13 +18,25 @@ static BOOL isDebugger_NSObject_AOCocoa = false;
     return isDebugger_NSObject_AOCocoa;
 }
 
--(void)log:(NSObject *)obj{
+-(void)log:(NSObject *)obj,...{
     if (isDebugger_NSObject_AOCocoa) {
-        NSLog(@"%@=>%@",[self tag],obj);
+        va_list arguments;
+        id eachObject;
+        if (obj) {
+            NSString *rs =[NSString stringWithFormat:@"%@=>%@",[self tag],obj];
+            va_start(arguments, obj);
+            while ((eachObject = va_arg(arguments, id))) {
+                rs=[rs stringByAppendingString:[NSString stringWithFormat:@" %@",eachObject]];
+            }
+            va_end(arguments);
+            NSLog(@"%@",rs);
+        }
+        
     }
+    
 }
 
 -(NSString *)tag{
-    return [NSString stringWithFormat:@"%@",NSStringFromClass([self class])];
+    return NSStringFromClass([self class]);
 }
 @end
