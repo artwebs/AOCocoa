@@ -9,7 +9,6 @@
 #import "SecurityAES.h"
 #import "NSData+Base64.h"
 #import "ArtLog.h"
-#import "FBEncryptorAES.h"
 #import <CommonCrypto/CommonCryptor.h>
 
 @implementation SecurityAES
