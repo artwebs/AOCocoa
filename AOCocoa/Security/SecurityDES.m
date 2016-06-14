@@ -26,7 +26,7 @@
 
 -(NSString *)encodeWithString:(NSString *)source key:(NSString *)key
 {
-    return [self encodeWithString:source key:key iv:@"00000000"];
+    return [self encodeWithString:source key:key iv:[key substringToIndex:8]];
 }
 
 
@@ -68,7 +68,7 @@
 
 -(NSString *)decodeWithString:(NSString *)source key:(NSString *)key
 {
-    return [self decodeWithString:source key:key iv:@"00000000"];
+    return [self decodeWithString:source key:key iv:[key substringToIndex:8]];
 }
           
             

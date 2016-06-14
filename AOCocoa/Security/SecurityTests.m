@@ -64,6 +64,18 @@
     NSLog(@"%s加密：%@",__PRETTY_FUNCTION__,[obj decodeWithString:rs key:key iv:iv]);
 }
 
+-(void)testSecurityAES
+{
+    Secu *obj= [[SecurityAES alloc] init];
+    NSString *key = @"Y8gyxetKJ68N3d35Lass72GP";
+    NSString *text = "a12*&1c中文";
+    NSString *rs = [obj encodeWithString:text key:key];
+    NSLog(@"%s加密：%@",__PRETTY_FUNCTION__,rs);
+    NSLog(@"%s加密：%@",__PRETTY_FUNCTION__,[obj decodeWithString:rs key:key]);
+    
+    
+}
+
 
 - (void)testExample
 {

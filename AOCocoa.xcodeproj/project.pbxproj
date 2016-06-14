@@ -127,6 +127,8 @@
 		03D260821B4E428E005BC492 /* Security.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2600E1B4E428E005BC492 /* Security.m */; };
 		03D260831B4E428E005BC492 /* SecurityDES.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D2600F1B4E428E005BC492 /* SecurityDES.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260841B4E428E005BC492 /* SecurityDES.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D260101B4E428E005BC492 /* SecurityDES.m */; };
+		03D412131D0E9F3F00FBB8D2 /* SecurityAES.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D412111D0E9F3F00FBB8D2 /* SecurityAES.h */; };
+		03D412141D0E9F3F00FBB8D2 /* SecurityAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D412121D0E9F3F00FBB8D2 /* SecurityAES.m */; };
 		4306169B1BD62D9C00399932 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4306169A1BD62D9C00399932 /* SystemConfiguration.framework */; };
 		439F26A41BBBAFCA00A19B71 /* AOCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D25F731B4E4220005BC492 /* AOCocoa.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		439F26A51BBBAFCA00A19B71 /* AOCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03D25F731B4E4220005BC492 /* AOCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -305,6 +307,8 @@
 		03D2600F1B4E428E005BC492 /* SecurityDES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityDES.h; sourceTree = "<group>"; };
 		03D260101B4E428E005BC492 /* SecurityDES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityDES.m; sourceTree = "<group>"; };
 		03D260111B4E428E005BC492 /* SecurityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityTests.m; sourceTree = "<group>"; };
+		03D412111D0E9F3F00FBB8D2 /* SecurityAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityAES.h; sourceTree = "<group>"; };
+		03D412121D0E9F3F00FBB8D2 /* SecurityAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityAES.m; sourceTree = "<group>"; };
 		4306169A1BD62D9C00399932 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		439F26A71BBBB0F500A19B71 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -681,6 +685,8 @@
 				03D2600F1B4E428E005BC492 /* SecurityDES.h */,
 				03D260101B4E428E005BC492 /* SecurityDES.m */,
 				03D260111B4E428E005BC492 /* SecurityTests.m */,
+				03D412111D0E9F3F00FBB8D2 /* SecurityAES.h */,
+				03D412121D0E9F3F00FBB8D2 /* SecurityAES.m */,
 			);
 			path = Security;
 			sourceTree = "<group>";
@@ -750,6 +756,7 @@
 				03D260741B4E428E005BC492 /* h264.h in Headers */,
 				03D2602E1B4E428E005BC492 /* RtspClientLinstener.h in Headers */,
 				03D2602C1B4E428E005BC492 /* RtspClient.h in Headers */,
+				03D412131D0E9F3F00FBB8D2 /* SecurityAES.h in Headers */,
 				03D260701B4E428E005BC492 /* dsputil.h in Headers */,
 				03D2606B1B4E428E005BC492 /* avcodec.h in Headers */,
 				03D25F791B4E4220005BC492 /* AOCocoa.h in Headers */,
@@ -953,6 +960,7 @@
 				03D260841B4E428E005BC492 /* SecurityDES.m in Sources */,
 				035044971B54B1FD00404194 /* AOHelpView.m in Sources */,
 				03D2607B1B4E428E005BC492 /* mpegvideo.m in Sources */,
+				03D412141D0E9F3F00FBB8D2 /* SecurityAES.m in Sources */,
 				03D260681B4E428E005BC492 /* Response.m in Sources */,
 				03D260131B4E428E005BC492 /* NSData+Base64.m in Sources */,
 				03D2603A1B4E428E005BC492 /* ArtCircleProcessView.m in Sources */,
