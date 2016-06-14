@@ -13,10 +13,10 @@
 @implementation SecurityDES
 -(id)init
 {
-    return [self initWithMode:ECB];
+    return [self initWithModel:ECB|PKCS7];
 }
 
--(id)initWithMode:(int)mod
+-(id)initWithModel:(int)mod
 {
     if (self=[super initWithKeySize:kCCKeySize3DES blockSize:kCCBlockSize3DES]) {
         model=mod;

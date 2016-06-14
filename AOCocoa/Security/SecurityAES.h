@@ -8,7 +8,10 @@
 
 #import <AOCocoa/AOCocoa.h>
 
-@interface SecurityAES : Security
+@interface SecurityAES : Security{
+    MODEL model; 
+}
+-(id)initWithModel:(MODEL)mod;
 -(NSString *)encodeWithString:(NSString *)source key:(NSString *)key;
 -(NSString *)encodeWithString:(NSString *)source key:(NSString *)key iv:(NSString *)iv;
 -(NSString *)decodeWithString:(NSString *)source key:(NSString *)key;

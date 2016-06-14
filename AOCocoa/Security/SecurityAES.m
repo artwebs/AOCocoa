@@ -9,72 +9,85 @@
 #import "SecurityAES.h"
 #import "NSData+Base64.h"
 #import "ArtLog.h"
+#import "FBEncryptorAES.h"
 #import <CommonCrypto/CommonCryptor.h>
 
 @implementation SecurityAES
+-(id)init
+{
+    return [self initWithModel:ECB|PKCS7];
+}
+
+-(id)initWithModel:(MODEL)mod
+{
+    if(self= [super initWithKeySize:kCCKeySizeAES256 blockSize:kCCBlockSizeAES128]){
+        model = mod;
+    }
+    return self;
+}
+
 -(NSString *)encodeWithString:(NSString *)source key:(NSString *)key
 {
-    return [self encodeWithString:source key:key iv:[key substringToIndex:8]];
+    return [self encodeWithString:source key:key iv:[key substringToIndex:16]];
 }
 
 -(NSString *)encodeWithString:(NSString *)source key:(NSString *)key iv:(NSString *)iv
 {
     NSData* data = [source dataUsingEncoding:NSUTF8StringEncoding];
-    char keyPtr[kCCKeySizeAES256+1];
-    bzero(keyPtr, sizeof(keyPtr));
-    [key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
-    NSUInteger dataLength = [data length];
-    size_t bufferSize = dataLength + kCCBlockSizeAES128;
-    void *buffer = malloc(bufferSize);
-    size_t numBytesEncrypted = 0;
-    CCCryptorStatus cryptStatus = CCCrypt(kCCEncrypt, kCCAlgorithmAES128,
-                                          kCCOptionPKCS7Padding ,
-                                          keyPtr, kCCBlockSizeAES128,
-                                          [[iv dataUsingEncoding:NSUTF8StringEncoding] bytes],
-                                          [data bytes], dataLength,
-                                          buffer, bufferSize,
-                                          &numBytesEncrypted);
     NSString *result = nil;
-
-    if (cryptStatus == kCCSuccess) {
-        result = [[NSData dataWithBytesNoCopy:buffer length:numBytesEncrypted] base64Encoding];
-        [ArtLog warnWithTag:@"SecurityAES encodeWithString" object:result];
-        
+    
+    CCCryptorStatus ccStatus   = kCCSuccess;
+    size_t          cryptBytes = 0;    // Number of bytes moved to buffer.
+    NSMutableData  *dataOut    = [NSMutableData dataWithLength:data.length + kCCBlockSizeAES128];
+    
+    ccStatus = CCCrypt( kCCEncrypt,
+                       kCCAlgorithmAES128,
+                       model,
+                       [self getKey:key],
+                       kCCKeySizeAES256,
+                       [self getIV:iv],
+                       data.bytes,
+                       data.length,
+                       dataOut.mutableBytes,
+                       dataOut.length,
+                       &cryptBytes);
+    if (ccStatus == kCCSuccess) {
+        dataOut.length = cryptBytes;
+        result = [dataOut base64Encoding];
     }
-    free(buffer);
+    
     return result;
 }
 
 -(NSString *)decodeWithString:(NSString *)source key:(NSString *)key
 {
-    return [self decodeWithString:source key:key iv:[key substringToIndex:8]];
+    return [self decodeWithString:source key:key iv:[key substringToIndex:16]];
 }
 
 
 -(NSString *)decodeWithString:(NSString *)source key:(NSString *)key iv:(NSString *)iv
 {
     NSData *encryptData =[NSData dataWithBase64EncodedString:source];
-    char keyPtr[kCCKeySizeAES256+1];
-    bzero(keyPtr, sizeof(keyPtr));
-    [key getCString:keyPtr maxLength:sizeof(keyPtr) encoding:NSUTF8StringEncoding];
-    NSUInteger dataLength = [encryptData length];
-    size_t bufferSize = dataLength + kCCBlockSizeAES128;
-    void *buffer = malloc(bufferSize);
-    size_t numBytesDecrypted = 0;
-    CCCryptorStatus cryptStatus = CCCrypt(kCCDecrypt, kCCAlgorithmAES128,
-                                          kCCOptionPKCS7Padding ,
-                                          keyPtr, kCCBlockSizeAES128,
-                                          [[iv dataUsingEncoding:NSUTF8StringEncoding] bytes],
-                                          [encryptData bytes], dataLength,
-                                          buffer, bufferSize,
-                                          &numBytesDecrypted);
     NSString *result = nil;
-    if (cryptStatus == kCCSuccess) {
-        result =  [[NSString alloc] initWithData:[NSData dataWithBytesNoCopy:buffer length:numBytesDecrypted] encoding:NSUTF8StringEncoding];
-        [ArtLog warnWithTag:@"SecurityAES decodeWithString" object:result];
-        
+    
+    CCCryptorStatus ccStatus   = kCCSuccess;
+    size_t          cryptBytes = 0;    // Number of bytes moved to buffer.
+    NSMutableData  *dataOut    = [NSMutableData dataWithLength:encryptData.length + kCCBlockSizeAES128];
+    ccStatus = CCCrypt( kCCDecrypt,
+                       kCCAlgorithmAES128,
+                       model,
+                       [self getKey:key],
+                       kCCKeySizeAES256,
+                       [self getIV:iv],
+                       encryptData.bytes,
+                       encryptData.length,
+                       dataOut.mutableBytes,
+                       dataOut.length,
+                       &cryptBytes);
+    if (ccStatus == kCCSuccess) {
+        dataOut.length = cryptBytes;
+        result =  [[NSString alloc] initWithData:dataOut encoding:NSUTF8StringEncoding];
     }
-    free(buffer);
     return result;
 }
 

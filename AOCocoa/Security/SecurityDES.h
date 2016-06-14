@@ -8,15 +8,13 @@
 
 #import <Foundation/Foundation.h>
 #import "Security.h"
-typedef enum MODEL{
-    ECB=0x0002,CBC=0x0000,PKCS7=0x0001
-} MODEL;
+
 
 @interface SecurityDES : Security
 {
     MODEL model;
 }
--(id)initWithMode:(int)mod;
+-(id)initWithModel:(int)mod;
 -(NSString *)encodeWithString:(NSString *)source key:(NSString *)key;
 -(NSString *)encodeWithString:(NSString *)source key:(NSString *)key iv:(NSString *)iv;
 -(NSString *)decodeWithString:(NSString *)source key:(NSString *)key;

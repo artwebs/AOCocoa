@@ -130,6 +130,8 @@
 		03D412131D0E9F3F00FBB8D2 /* SecurityAES.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D412111D0E9F3F00FBB8D2 /* SecurityAES.h */; };
 		03D412141D0E9F3F00FBB8D2 /* SecurityAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D412121D0E9F3F00FBB8D2 /* SecurityAES.m */; };
 		03E8487D1D0F920E001D0DD3 /* SecurityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8487C1D0F920E001D0DD3 /* SecurityTests.m */; };
+		03E848801D0FB9DB001D0DD3 /* FBEncryptorAES.h in Headers */ = {isa = PBXBuildFile; fileRef = 03E8487E1D0FB9DB001D0DD3 /* FBEncryptorAES.h */; };
+		03E848811D0FB9DB001D0DD3 /* FBEncryptorAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8487F1D0FB9DB001D0DD3 /* FBEncryptorAES.m */; };
 		4306169B1BD62D9C00399932 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4306169A1BD62D9C00399932 /* SystemConfiguration.framework */; };
 		439F26A41BBBAFCA00A19B71 /* AOCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D25F731B4E4220005BC492 /* AOCocoa.framework */; settings = {ATTRIBUTES = (Required, ); }; };
 		439F26A51BBBAFCA00A19B71 /* AOCocoa.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 03D25F731B4E4220005BC492 /* AOCocoa.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
@@ -310,6 +312,8 @@
 		03D412111D0E9F3F00FBB8D2 /* SecurityAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityAES.h; sourceTree = "<group>"; };
 		03D412121D0E9F3F00FBB8D2 /* SecurityAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityAES.m; sourceTree = "<group>"; };
 		03E8487C1D0F920E001D0DD3 /* SecurityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityTests.m; sourceTree = "<group>"; };
+		03E8487E1D0FB9DB001D0DD3 /* FBEncryptorAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBEncryptorAES.h; sourceTree = "<group>"; };
+		03E8487F1D0FB9DB001D0DD3 /* FBEncryptorAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBEncryptorAES.m; sourceTree = "<group>"; };
 		4306169A1BD62D9C00399932 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		439F26A71BBBB0F500A19B71 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -688,6 +692,8 @@
 				03D260101B4E428E005BC492 /* SecurityDES.m */,
 				03D412111D0E9F3F00FBB8D2 /* SecurityAES.h */,
 				03D412121D0E9F3F00FBB8D2 /* SecurityAES.m */,
+				03E8487E1D0FB9DB001D0DD3 /* FBEncryptorAES.h */,
+				03E8487F1D0FB9DB001D0DD3 /* FBEncryptorAES.m */,
 			);
 			path = Security;
 			sourceTree = "<group>";
@@ -729,6 +735,7 @@
 				03D2605E1B4E428E005BC492 /* IServiceHttp.h in Headers */,
 				03D260181B4E428E005BC492 /* NSData+Base64.h in Headers */,
 				03D260641B4E428E005BC492 /* RemoteFactory.h in Headers */,
+				03E848801D0FB9DB001D0DD3 /* FBEncryptorAES.h in Headers */,
 				03D2607F1B4E428E005BC492 /* ArtLog.h in Headers */,
 				03D2605D1B4E428E005BC492 /* IService.h in Headers */,
 				03D260391B4E428E005BC492 /* ArtCircleProcessView.h in Headers */,
@@ -1000,6 +1007,7 @@
 				03D2602B1B4E428E005BC492 /* RTPUnpackage.mm in Sources */,
 				03D2602D1B4E428E005BC492 /* RtspClient.mm in Sources */,
 				03D260481B4E428E005BC492 /* ArtFrameDragView.m in Sources */,
+				03E848811D0FB9DB001D0DD3 /* FBEncryptorAES.m in Sources */,
 				03D260461B4E428E005BC492 /* ArtFrameCellView.m in Sources */,
 				03D2603C1B4E428E005BC492 /* ArtEditView.m in Sources */,
 				03D260441B4E428E005BC492 /* DicListView.m in Sources */,

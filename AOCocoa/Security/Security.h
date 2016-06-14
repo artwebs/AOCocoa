@@ -7,6 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
+typedef enum MODEL{
+    ECB=0x0002,CBC=0x0000,PKCS7=0x0001
+} MODEL;
 @interface Security : NSObject
 {
     int keySize;
