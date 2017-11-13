@@ -127,8 +127,14 @@
 		03D260821B4E428E005BC492 /* Security.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D2600E1B4E428E005BC492 /* Security.m */; };
 		03D260831B4E428E005BC492 /* SecurityDES.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D2600F1B4E428E005BC492 /* SecurityDES.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260841B4E428E005BC492 /* SecurityDES.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D260101B4E428E005BC492 /* SecurityDES.m */; };
-		03D412131D0E9F3F00FBB8D2 /* SecurityAES.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D412111D0E9F3F00FBB8D2 /* SecurityAES.h */; };
+		03D412131D0E9F3F00FBB8D2 /* SecurityAES.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D412111D0E9F3F00FBB8D2 /* SecurityAES.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D412141D0E9F3F00FBB8D2 /* SecurityAES.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D412121D0E9F3F00FBB8D2 /* SecurityAES.m */; };
+		03DC0B751FB97305001BDFE6 /* DataMatrix.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DC0B6F1FB97305001BDFE6 /* DataMatrix.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03DC0B761FB97305001BDFE6 /* DataMatrix.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03DC0B701FB97305001BDFE6 /* DataMatrix.mm */; };
+		03DC0B771FB97305001BDFE6 /* QR_Encode.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 03DC0B711FB97305001BDFE6 /* QR_Encode.cpp */; };
+		03DC0B781FB97305001BDFE6 /* QR_Encode.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DC0B721FB97305001BDFE6 /* QR_Encode.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03DC0B791FB97305001BDFE6 /* QREncoder.h in Headers */ = {isa = PBXBuildFile; fileRef = 03DC0B731FB97305001BDFE6 /* QREncoder.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		03DC0B7A1FB97305001BDFE6 /* QREncoder.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03DC0B741FB97305001BDFE6 /* QREncoder.mm */; };
 		03E8487D1D0F920E001D0DD3 /* SecurityTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 03E8487C1D0F920E001D0DD3 /* SecurityTests.m */; };
 		4306169B1BD62D9C00399932 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4306169A1BD62D9C00399932 /* SystemConfiguration.framework */; };
 		439F26A41BBBAFCA00A19B71 /* AOCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 03D25F731B4E4220005BC492 /* AOCocoa.framework */; settings = {ATTRIBUTES = (Required, ); }; };
@@ -309,6 +315,13 @@
 		03D260101B4E428E005BC492 /* SecurityDES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityDES.m; sourceTree = "<group>"; };
 		03D412111D0E9F3F00FBB8D2 /* SecurityAES.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecurityAES.h; sourceTree = "<group>"; };
 		03D412121D0E9F3F00FBB8D2 /* SecurityAES.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityAES.m; sourceTree = "<group>"; };
+		03DC0B6F1FB97305001BDFE6 /* DataMatrix.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DataMatrix.h; sourceTree = "<group>"; };
+		03DC0B701FB97305001BDFE6 /* DataMatrix.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = DataMatrix.mm; sourceTree = "<group>"; };
+		03DC0B711FB97305001BDFE6 /* QR_Encode.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = QR_Encode.cpp; sourceTree = "<group>"; };
+		03DC0B721FB97305001BDFE6 /* QR_Encode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QR_Encode.h; sourceTree = "<group>"; };
+		03DC0B731FB97305001BDFE6 /* QREncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QREncoder.h; sourceTree = "<group>"; };
+		03DC0B741FB97305001BDFE6 /* QREncoder.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = QREncoder.mm; sourceTree = "<group>"; };
+		03DC0B7B1FB975C2001BDFE6 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		03E8487C1D0F920E001D0DD3 /* SecurityTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecurityTests.m; sourceTree = "<group>"; };
 		4306169A1BD62D9C00399932 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		439F26A71BBBB0F500A19B71 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
@@ -407,6 +420,7 @@
 		03D25F691B4E4220005BC492 = {
 			isa = PBXGroup;
 			children = (
+				03DC0B7B1FB975C2001BDFE6 /* README.md */,
 				03D260881B4E473C005BC492 /* Library */,
 				03D25F751B4E4220005BC492 /* AOCocoa */,
 				03D25F821B4E4220005BC492 /* AOCocoaTests */,
@@ -430,6 +444,7 @@
 		03D25F751B4E4220005BC492 /* AOCocoa */ = {
 			isa = PBXGroup;
 			children = (
+				03DC0B6E1FB97305001BDFE6 /* QRCodeEncoder */,
 				03D25F8F1B4E428E005BC492 /* Category */,
 				03D25F941B4E428E005BC492 /* Utils */,
 				03D25F9C1B4E428E005BC492 /* Socket */,
@@ -701,6 +716,19 @@
 			name = Library;
 			sourceTree = "<group>";
 		};
+		03DC0B6E1FB97305001BDFE6 /* QRCodeEncoder */ = {
+			isa = PBXGroup;
+			children = (
+				03DC0B6F1FB97305001BDFE6 /* DataMatrix.h */,
+				03DC0B701FB97305001BDFE6 /* DataMatrix.mm */,
+				03DC0B711FB97305001BDFE6 /* QR_Encode.cpp */,
+				03DC0B721FB97305001BDFE6 /* QR_Encode.h */,
+				03DC0B731FB97305001BDFE6 /* QREncoder.h */,
+				03DC0B741FB97305001BDFE6 /* QREncoder.mm */,
+			);
+			path = QRCodeEncoder;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -708,6 +736,7 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03D412131D0E9F3F00FBB8D2 /* SecurityAES.h in Headers */,
 				035044961B54B1FD00404194 /* AOHelpView.h in Headers */,
 				03D260141B4E428E005BC492 /* NSObject+AOCocoa.h in Headers */,
 				03D2601A1B4E428E005BC492 /* Utils.h in Headers */,
@@ -744,9 +773,12 @@
 				03D260411B4E428E005BC492 /* ArtView.h in Headers */,
 				03D260551B4E428E005BC492 /* ArtSubmitViewCell.h in Headers */,
 				03D260831B4E428E005BC492 /* SecurityDES.h in Headers */,
+				03DC0B791FB97305001BDFE6 /* QREncoder.h in Headers */,
 				03D260811B4E428E005BC492 /* Security.h in Headers */,
 				03D2602F1B4E428E005BC492 /* SimpleTable.h in Headers */,
 				03D260311B4E428E005BC492 /* SqliteHelper.h in Headers */,
+				03DC0B781FB97305001BDFE6 /* QR_Encode.h in Headers */,
+				03DC0B751FB97305001BDFE6 /* DataMatrix.h in Headers */,
 				03D260691B4E428E005BC492 /* ServiceTask.h in Headers */,
 				03D260281B4E428E005BC492 /* Base64.h in Headers */,
 				03D2602A1B4E428E005BC492 /* RTPUnpackage.h in Headers */,
@@ -757,7 +789,6 @@
 				03D260741B4E428E005BC492 /* h264.h in Headers */,
 				03D2602E1B4E428E005BC492 /* RtspClientLinstener.h in Headers */,
 				03D2602C1B4E428E005BC492 /* RtspClient.h in Headers */,
-				03D412131D0E9F3F00FBB8D2 /* SecurityAES.h in Headers */,
 				03D260701B4E428E005BC492 /* dsputil.h in Headers */,
 				03D2606B1B4E428E005BC492 /* avcodec.h in Headers */,
 				03D25F791B4E4220005BC492 /* AOCocoa.h in Headers */,
@@ -816,6 +847,7 @@
 				03D25F6F1B4E4220005BC492 /* Frameworks */,
 				03D25F701B4E4220005BC492 /* Headers */,
 				03D25F711B4E4220005BC492 /* Resources */,
+				03E45E921F9604480010E6C6 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -929,6 +961,22 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		03E45E921F9604480010E6C6 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [ \"${ACTION}\" = \"build\" ]\n\nthen\n\nINSTALL_DIR=${SRCROOT}/Products/${PROJECT_NAME}.framework\n\nDEVICE_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\n\nSIMULATOR_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework\n\nif [ -d \"${INSTALL_DIR}\" ]\n\nthen\n\nrm -rf \"${INSTALL_DIR}\"\n\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n\n#ditto \"${DEVICE_DIR}/Headers\" \"${INSTALL_DIR}/Headers\"\n\nlipo -create \"${DEVICE_DIR}/${PROJECT_NAME}\" \"${SIMULATOR_DIR}/${PROJECT_NAME}\" -output \"${INSTALL_DIR}/${PROJECT_NAME}\"\n\n#open \"${DEVICE_DIR}\"\n\nopen \"${SRCROOT}/Products\"\n\nfi";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		0350446A1B54B0A400404194 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -986,9 +1034,11 @@
 				03D2603E1B4E428E005BC492 /* ArtListControlPage.m in Sources */,
 				03D260611B4E428E005BC492 /* IServiceHttpSync.m in Sources */,
 				03D260581B4E428E005BC492 /* ArtSubmitViewCellButton.m in Sources */,
+				03DC0B761FB97305001BDFE6 /* DataMatrix.mm in Sources */,
 				03D2601F1B4E428E005BC492 /* AOSocket.mm in Sources */,
 				03D2607D1B4E428E005BC492 /* SubPackage.mm in Sources */,
 				03D260301B4E428E005BC492 /* SimpleTable.m in Sources */,
+				03DC0B771FB97305001BDFE6 /* QR_Encode.cpp in Sources */,
 				03D2605A1B4E428E005BC492 /* AddressBook.m in Sources */,
 				03D2604A1B4E428E005BC492 /* ArtFramePlayView.m in Sources */,
 				03D260151B4E428E005BC492 /* NSObject+AOCocoa.m in Sources */,
@@ -1001,6 +1051,7 @@
 				03D2602D1B4E428E005BC492 /* RtspClient.mm in Sources */,
 				03D260481B4E428E005BC492 /* ArtFrameDragView.m in Sources */,
 				03D260461B4E428E005BC492 /* ArtFrameCellView.m in Sources */,
+				03DC0B7A1FB97305001BDFE6 /* QREncoder.mm in Sources */,
 				03D2603C1B4E428E005BC492 /* ArtEditView.m in Sources */,
 				03D260441B4E428E005BC492 /* DicListView.m in Sources */,
 				03D260651B4E428E005BC492 /* RemoteFactory.m in Sources */,

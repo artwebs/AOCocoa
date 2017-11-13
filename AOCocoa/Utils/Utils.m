@@ -145,7 +145,7 @@
 +(void)deleteSerializeValue:(NSString *)key
 {
     NSUserDefaults *prefs = [NSUserDefaults standardUserDefaults];
-    [prefs delete:key];
+    [prefs removeObjectForKey:key];
     [prefs synchronize];
 }
 
