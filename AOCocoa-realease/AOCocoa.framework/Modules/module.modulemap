@@ -1,0 +1,6 @@
+framework module AOCocoa {
+  umbrella header "AOCocoa.h"
+
+  export *
+  module * { export * }
+}
