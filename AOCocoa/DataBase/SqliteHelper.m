@@ -16,39 +16,25 @@
 -(int)getCurVersion;
 @end
 
-
 @implementation SqliteHelper
--(id)initWithName:(NSString *)name
+@synthesize delegate;
+-(id)init:(NSString *)name version:(int)version
 {
     if (self=[super init]) {
-        dbVersion=0;
+        dbVersion=version;
         dbName=name;
+        if(self.delegate)
+            [self.delegate onCreate];
+        curVersion=[self getCurVersion];
+        if (curVersion<dbVersion) {
+            if(self.delegate)
+                [self.delegate onUpdate:curVersion newVersion:dbVersion];
+            [self exec:[NSString stringWithFormat:@"PRAGMA user_version=%d",dbVersion]];
+            curVersion=dbVersion;
+        }
     }
     return self;
 }
-
--(void)initDataWithVersion:(int)version
-{
-    dbVersion=version;
-    [self onCreateWithSqlite];
-    curVersion=[self getCurVersion];
-    if (curVersion<dbVersion) {
-        [self onUpdateWithSqlite:curVersion newVersion:dbVersion];
-        [self execWithSql:[NSString stringWithFormat:@"PRAGMA user_version=%d",dbVersion]];
-        curVersion=dbVersion;
-    }
-}
-
--(void)onCreateWithSqlite
-{
-    
-}
-
--(void)onUpdateWithSqlite:(int)oldVer newVersion:(int)newVer
-{
-
-}
-
 
 -(BOOL)conn
 {
@@ -65,67 +51,76 @@
     return rs;
 }
 
--(void)closeConn
+-(void)close
 {
     sqlite3_close(db);
 }
 
--(BOOL)execWithSql:(NSString *)sql
+-(int)exec:(NSString *)sql
 {
     [self conn];
     char *err;
-    BOOL rs=YES;
+    int rs=0;
     if (sqlite3_exec(db, [sql UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+        rs=sqlite3_changes(db);
         sqlite3_close(db);
-        rs=NO;
         NSLog(@"数据库操作数据失败!");
     }
-    [self closeConn];
+    [self close];
     [self log:[NSString stringWithFormat:@"%@=>%d",sql,rs],nil];
     return rs;
 }
 
--(NSMutableArray *)queryWithTbName:(NSString *)tbname fieldArray:(NSArray *)fields where:(NSString *)where
-{
+-(NSArray  *)query:(NSString * )sql{
     [self conn];
+    [self log:sql];
     sqlite3_stmt *stmt;
     NSMutableArray *rsArr=[[NSMutableArray alloc]init];
-    NSString *sql=@"select ";
-    for (int i=0; i<[fields count]; i++) {
-        if ([fields objectAtIndex:i]==nil) {
-            continue;
-        }
-        if (i!=0) {
-            sql=[sql stringByAppendingString:@","];
-        }
-        sql=[sql stringByAppendingString:[fields objectAtIndex:i]];
-    }
-    sql=[sql stringByAppendingString:@" from "];
-    sql=[sql stringByAppendingString:tbname];
-    if (where) {
-        sql=[sql stringByAppendingString:@" where "];
-        sql=[sql stringByAppendingString:where];
-    }
     [self log:sql,nil];
     if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, nil) == SQLITE_OK) {
+        int num_cols = sqlite3_column_count(stmt);
         while (sqlite3_step(stmt) == SQLITE_ROW) {
             NSMutableDictionary *dic=[[NSMutableDictionary alloc]init];
-            for (int i=0; i<[fields count]; i++) {
-                char *name = (char*)sqlite3_column_text(stmt, i);
-                NSString *nameStr=@"";
-                if (name!=NULL) {
-                    nameStr=[NSString stringWithUTF8String:name];
+            for (int i=0; i<num_cols; i++) {
+                const char* col_name = sqlite3_column_name(stmt, i);
+                if (col_name) {
+                    NSString *colName = [NSString stringWithUTF8String:col_name];
+                    id value = nil;
+                    // fetch according to type
+                    switch (sqlite3_column_type(stmt, i)) {
+                        case SQLITE_INTEGER: {
+                            int i_value = sqlite3_column_int(stmt, i);
+                            value = [NSNumber numberWithInt:i_value];
+                            break;
+                        }
+                        case SQLITE_FLOAT: {
+                            double d_value = sqlite3_column_double(stmt, i);
+                            value = [NSNumber numberWithDouble:d_value];
+                            break;
+                        }
+                        case SQLITE_TEXT: {
+                            char *c_value = (char *)sqlite3_column_text(stmt, i);
+                            value = [[NSString alloc] initWithUTF8String:c_value];
+                            break;
+                        }
+                        case SQLITE_BLOB: {
+                            value = (__bridge id)(sqlite3_column_blob(stmt, i));
+                            break;
+                        }
+                    }
+                    if (value) {
+                        [dic setObject:value forKey:colName];
+                    }else{
+                        [dic setObject:@"NULL" forKey:colName];
+                    }
                 }
-                [dic setObject:nameStr forKey:[fields objectAtIndex:i]];
             }
             [rsArr addObject:dic];
         }
     }
-    [self closeConn];
+    [self close];
     return rsArr;
 }
-
-
 
 -(int)getCurVersion
 {
@@ -138,7 +133,7 @@
             rsInt=sqlite3_column_int(stmt, 0);
         }
     }
-    [self closeConn];
+    [self close];
     return rsInt;
 }
 

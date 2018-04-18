@@ -17,7 +17,6 @@ FOUNDATION_EXPORT const unsigned char AOCocoaVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <AOCocoa/PublicHeader.h>
 #import <AOCocoa/NSData+Base64.h>
 #import <AOCocoa/NSObject+AOCocoa.h>
-#import <AOCocoa/SimpleTable.h>
 #import <AOCocoa/SqliteHelper.h>
 #import <AOCocoa/ArtLog.h>
 #import <AOCocoa/AddressBook.h>

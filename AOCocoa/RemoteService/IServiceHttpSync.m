@@ -14,14 +14,34 @@ static NSString *tag=@"IServiceHttpSync";
 {
     if (self=[super init]) {
         urlStr=_url;
+        codeField=@"code";
+        countField=@"count";
+        messageField=@"message";
+        dataField=@"result";
+    }
+    return self;
+}
+
+-(id)initWithUrl:(NSString *)_url field:(NSArray *)field
+{
+    if (self=[super init]) {
+        urlStr=_url;
+        codeField=field[0];
+        countField=field[1];
+        messageField=field[2];
+        dataField=field[3];
     }
     return self;
 }
 
 -(NSString *)sendMessage:(NSString *)params
 {
+    return [self sendPath:@"" Message:params];
+}
+
+-(NSString *)sendPath:(NSString *)_path Message:(NSString *)params{
     //第一步，创建URL
-    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURL *url = [NSURL URLWithString:[urlStr stringByAppendingString:_path]];
     //第二步，创建请求
     NSMutableURLRequest *request = [[NSMutableURLRequest alloc]initWithURL:url cachePolicy:NSURLRequestUseProtocolCachePolicy timeoutInterval:10];
     [request setHTTPMethod:@"POST"];//设置请求方式为POST，默认为GET
@@ -32,7 +52,7 @@ static NSString *tag=@"IServiceHttpSync";
     NSString *rs;
     NSData *received = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&error];
     if (error) {
-        rs=[Utils JSONObjectToString:@{@"code":@"0",@"count":@"0",@"message":[NSString stringWithFormat:@"%@",error.localizedDescription],@"result":[NSString stringWithFormat:@"%d",(int)error.code]}];
+        rs=[Utils JSONObjectToString:@{codeField:@"0",countField:@"0",messageField:[NSString stringWithFormat:@"%@",error.localizedDescription],dataField:[NSString stringWithFormat:@"%d",(int)error.code]}];
     }
     else
     {
@@ -44,10 +64,14 @@ static NSString *tag=@"IServiceHttpSync";
 
 -(NSString *)sendParems:(NSMutableDictionary *)postParems
 {
-    return [self sendParems:postParems imageDict:nil];
+    return [self sendPath:@"" Parems:postParems imageDict:nil];
 }
 
--(NSString *)sendParems: (NSMutableDictionary *)postParems imageDict:(NSMutableDictionary *) dicImages
+-(NSString *)sendPath:(NSString *)_path Parems:(NSMutableDictionary *)postParems{
+    return [self sendPath:_path Parems:postParems imageDict:nil];
+}
+
+-(NSString *)sendPath:(NSString *)_path Parems: (NSMutableDictionary *)postParems imageDict:(NSMutableDictionary *) dicImages
 {
     NSString * res;
     
@@ -57,7 +81,7 @@ static NSString *tag=@"IServiceHttpSync";
     //根据url初始化request
     //NSMutableURLRequest* request = [NSMutableURLRequest requestWithURL:[NSURL URLWithString:strUrl] cachePolicy:NSURLRequestReloadIgnoringLocalCacheData timeoutInterval:10];
     
-    NSURL *url = [NSURL URLWithString:urlStr];
+    NSURL *url = [NSURL URLWithString:[urlStr stringByAppendingString:_path]];
     NSMutableURLRequest *request = [NSMutableURLRequest requestWithURL:url];
     //分界线 --AaB03x
     NSString *MPboundary=[[NSString alloc]initWithFormat:@"--%@",TWITTERFON_FORM_BOUNDARY];

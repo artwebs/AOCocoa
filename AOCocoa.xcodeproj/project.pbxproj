@@ -42,8 +42,6 @@
 		03D2602C1B4E428E005BC492 /* RtspClient.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FAD1B4E428E005BC492 /* RtspClient.h */; };
 		03D2602D1B4E428E005BC492 /* RtspClient.mm in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FAE1B4E428E005BC492 /* RtspClient.mm */; };
 		03D2602E1B4E428E005BC492 /* RtspClientLinstener.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FAF1B4E428E005BC492 /* RtspClientLinstener.h */; };
-		03D2602F1B4E428E005BC492 /* SimpleTable.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FB11B4E428E005BC492 /* SimpleTable.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03D260301B4E428E005BC492 /* SimpleTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FB21B4E428E005BC492 /* SimpleTable.m */; };
 		03D260311B4E428E005BC492 /* SqliteHelper.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FB31B4E428E005BC492 /* SqliteHelper.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260321B4E428E005BC492 /* SqliteHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25FB41B4E428E005BC492 /* SqliteHelper.m */; };
 		03D260331B4E428E005BC492 /* ArtAlert.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25FB61B4E428E005BC492 /* ArtAlert.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -227,8 +225,6 @@
 		03D25FAD1B4E428E005BC492 /* RtspClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtspClient.h; sourceTree = "<group>"; };
 		03D25FAE1B4E428E005BC492 /* RtspClient.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = RtspClient.mm; sourceTree = "<group>"; };
 		03D25FAF1B4E428E005BC492 /* RtspClientLinstener.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RtspClientLinstener.h; sourceTree = "<group>"; };
-		03D25FB11B4E428E005BC492 /* SimpleTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimpleTable.h; sourceTree = "<group>"; };
-		03D25FB21B4E428E005BC492 /* SimpleTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimpleTable.m; sourceTree = "<group>"; };
 		03D25FB31B4E428E005BC492 /* SqliteHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SqliteHelper.h; sourceTree = "<group>"; };
 		03D25FB41B4E428E005BC492 /* SqliteHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SqliteHelper.m; sourceTree = "<group>"; };
 		03D25FB61B4E428E005BC492 /* ArtAlert.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtAlert.h; sourceTree = "<group>"; };
@@ -540,8 +536,6 @@
 		03D25FB01B4E428E005BC492 /* DataBase */ = {
 			isa = PBXGroup;
 			children = (
-				03D25FB11B4E428E005BC492 /* SimpleTable.h */,
-				03D25FB21B4E428E005BC492 /* SimpleTable.m */,
 				03D25FB31B4E428E005BC492 /* SqliteHelper.h */,
 				03D25FB41B4E428E005BC492 /* SqliteHelper.m */,
 			);
@@ -775,7 +769,6 @@
 				03D260831B4E428E005BC492 /* SecurityDES.h in Headers */,
 				03DC0B791FB97305001BDFE6 /* QREncoder.h in Headers */,
 				03D260811B4E428E005BC492 /* Security.h in Headers */,
-				03D2602F1B4E428E005BC492 /* SimpleTable.h in Headers */,
 				03D260311B4E428E005BC492 /* SqliteHelper.h in Headers */,
 				03DC0B781FB97305001BDFE6 /* QR_Encode.h in Headers */,
 				03DC0B751FB97305001BDFE6 /* DataMatrix.h in Headers */,
@@ -973,7 +966,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "if [ \"${ACTION}\" = \"build\" ]\n\nthen\n\nINSTALL_DIR=${SRCROOT}/Products/${PROJECT_NAME}.framework\n\nDEVICE_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphoneos/${PROJECT_NAME}.framework\n\nSIMULATOR_DIR=${BUILD_ROOT}/${CONFIGURATION}-iphonesimulator/${PROJECT_NAME}.framework\n\nif [ -d \"${INSTALL_DIR}\" ]\n\nthen\n\nrm -rf \"${INSTALL_DIR}\"\n\nfi\n\nmkdir -p \"${INSTALL_DIR}\"\n\ncp -R \"${DEVICE_DIR}/\" \"${INSTALL_DIR}/\"\n\n#ditto \"${DEVICE_DIR}/Headers\" \"${INSTALL_DIR}/Headers\"\n\nlipo -create \"${DEVICE_DIR}/${PROJECT_NAME}\" \"${SIMULATOR_DIR}/${PROJECT_NAME}\" -output \"${INSTALL_DIR}/${PROJECT_NAME}\"\n\n#open \"${DEVICE_DIR}\"\n\nopen \"${SRCROOT}/Products\"\n\nfi";
+			shellScript = "";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1037,7 +1030,6 @@
 				03DC0B761FB97305001BDFE6 /* DataMatrix.mm in Sources */,
 				03D2601F1B4E428E005BC492 /* AOSocket.mm in Sources */,
 				03D2607D1B4E428E005BC492 /* SubPackage.mm in Sources */,
-				03D260301B4E428E005BC492 /* SimpleTable.m in Sources */,
 				03DC0B771FB97305001BDFE6 /* QR_Encode.cpp in Sources */,
 				03D2605A1B4E428E005BC492 /* AddressBook.m in Sources */,
 				03D2604A1B4E428E005BC492 /* ArtFramePlayView.m in Sources */,

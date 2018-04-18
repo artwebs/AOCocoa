@@ -7,6 +7,12 @@
 //
 
 #import <Foundation/Foundation.h>
+@protocol SqliteHelperDelegate <NSObject>
+-(void)onCreate;
+-(void)onUpdate:(int)oldVer newVersion:(int)newVer;
+@end
+@interface DBNULL: NSObject{}
+@end
 @interface SqliteHelper : NSObject
 {
    
@@ -14,13 +20,10 @@
     int curVersion;
     NSString *dbName;
 }
-
--(id)initWithName:(NSString *)name;
--(void)initDataWithVersion:(int)version;
--(void)onCreateWithSqlite;
--(void)onUpdateWithSqlite:(int)oldVer newVersion:(int)newVer;
+@property (nonatomic,retain) id<SqliteHelperDelegate> delegate;
+-(id)init:(NSString *)name version:(int)version;
 -(BOOL)conn;
--(void)closeConn;
--(BOOL)execWithSql:(NSString *)sql;
--(NSMutableArray *)queryWithTbName:(NSString *)tbname fieldArray:(NSArray *)fields where:(NSString *)where;
+-(void)close;
+-(int)exec:(NSString *)sql;
+-(NSArray *)query:(NSString *)sql;
 @end

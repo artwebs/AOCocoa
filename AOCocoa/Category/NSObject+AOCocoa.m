@@ -23,10 +23,11 @@ static BOOL isDebugger_NSObject_AOCocoa = false;
         va_list arguments;
         id eachObject;
         if (obj) {
-            NSString *rs =[NSString stringWithFormat:@"%@=>%@",[self tag],obj];
+            NSString *rs =[self tag];
             va_start(arguments, obj);
             while ((eachObject = va_arg(arguments, id))) {
-                rs=[rs stringByAppendingString:[NSString stringWithFormat:@" %@",eachObject]];
+                if(eachObject)
+                    rs=[rs stringByAppendingString:[NSString stringWithFormat:@" %@",eachObject]];
             }
             va_end(arguments);
             NSLog(@"%@",rs);
