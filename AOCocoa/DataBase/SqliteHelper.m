@@ -59,11 +59,11 @@
 -(int)exec:(NSString *)sql
 {
     [self conn];
-    char *err;
     int rs=0;
-    if (sqlite3_exec(db, [sql UTF8String], NULL, NULL, &err) != SQLITE_OK) {
+    sqlite3_stmt *stmt;
+    if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, nil) == SQLITE_OK&&sqlite3_step(stmt)==SQLITE_DONE) {
         rs=sqlite3_changes(db);
-        sqlite3_close(db);
+    }else{
         NSLog(@"数据库操作数据失败!");
     }
     [self close];
@@ -73,7 +73,7 @@
 
 -(NSArray  *)query:(NSString * )sql{
     [self conn];
-    [self log:sql];
+    [self log:sql,nil];
     sqlite3_stmt *stmt;
     NSMutableArray *rsArr=[[NSMutableArray alloc]init];
     [self log:sql,nil];
