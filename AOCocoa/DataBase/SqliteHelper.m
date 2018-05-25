@@ -59,7 +59,7 @@
 -(int)exec:(NSString *)sql
 {
     [self conn];
-    int rs=0;
+    int rs =0;
     sqlite3_stmt *stmt;
     if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, nil) == SQLITE_OK&&sqlite3_step(stmt)==SQLITE_DONE) {
         rs=sqlite3_changes(db);
@@ -73,7 +73,6 @@
 
 -(NSArray  *)query:(NSString * )sql{
     [self conn];
-    [self log:sql,nil];
     sqlite3_stmt *stmt;
     NSMutableArray *rsArr=[[NSMutableArray alloc]init];
     [self log:sql,nil];
