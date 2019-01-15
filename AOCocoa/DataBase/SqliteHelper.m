@@ -17,18 +17,16 @@
 @end
 
 @implementation SqliteHelper
-@synthesize delegate;
+
 -(id)init:(NSString *)name version:(int)version
 {
     if (self=[super init]) {
         dbVersion=version;
         dbName=name;
-        if(self.delegate)
-            [self.delegate onCreate];
+        [self onCreate];
         curVersion=[self getCurVersion];
         if (curVersion<dbVersion) {
-            if(self.delegate)
-                [self.delegate onUpdate:curVersion newVersion:dbVersion];
+            [self onUpdate:curVersion newVersion:dbVersion];
             [self exec:[NSString stringWithFormat:@"PRAGMA user_version=%d",dbVersion]];
             curVersion=dbVersion;
         }
@@ -64,7 +62,7 @@
     if (sqlite3_prepare_v2(db, [sql UTF8String], -1, &stmt, nil) == SQLITE_OK&&sqlite3_step(stmt)==SQLITE_DONE) {
         rs=sqlite3_changes(db);
     }else{
-        NSLog(@"数据库操作数据失败!");
+        [self log:[NSString stringWithFormat:@"操作失败：%s",sqlite3_errmsg(db)],nil];
     }
     [self close];
     [self log:[NSString stringWithFormat:@"%@=>%d",sql,rs],nil];
@@ -134,6 +132,13 @@
     }
     [self close];
     return rsInt;
+}
+
+-(void)onCreate{
+    
+}
+-(void)onUpdate:(int)oldVer newVersion:(int)newVer{
+    
 }
 
 @end
