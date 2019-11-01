@@ -29,8 +29,6 @@
 		03D260151B4E428E005BC492 /* NSObject+AOCocoa.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25F931B4E428E005BC492 /* NSObject+AOCocoa.m */; };
 		03D260161B4E428E005BC492 /* ArtNumberToCapital.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F951B4E428E005BC492 /* ArtNumberToCapital.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D260171B4E428E005BC492 /* ArtNumberToCapital.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25F961B4E428E005BC492 /* ArtNumberToCapital.m */; };
-		03D260181B4E428E005BC492 /* NSData+Base64.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F971B4E428E005BC492 /* NSData+Base64.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		03D260191B4E428E005BC492 /* NSData+Base64.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25F981B4E428E005BC492 /* NSData+Base64.m */; };
 		03D2601A1B4E428E005BC492 /* Utils.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F991B4E428E005BC492 /* Utils.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		03D2601B1B4E428E005BC492 /* Utils.m in Sources */ = {isa = PBXBuildFile; fileRef = 03D25F9A1B4E428E005BC492 /* Utils.m */; };
 		03D2601E1B4E428E005BC492 /* AOSocket.h in Headers */ = {isa = PBXBuildFile; fileRef = 03D25F9E1B4E428E005BC492 /* AOSocket.h */; };
@@ -211,8 +209,6 @@
 		03D25F931B4E428E005BC492 /* NSObject+AOCocoa.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+AOCocoa.m"; sourceTree = "<group>"; };
 		03D25F951B4E428E005BC492 /* ArtNumberToCapital.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ArtNumberToCapital.h; sourceTree = "<group>"; };
 		03D25F961B4E428E005BC492 /* ArtNumberToCapital.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ArtNumberToCapital.m; sourceTree = "<group>"; };
-		03D25F971B4E428E005BC492 /* NSData+Base64.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSData+Base64.h"; sourceTree = "<group>"; };
-		03D25F981B4E428E005BC492 /* NSData+Base64.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSData+Base64.m"; sourceTree = "<group>"; };
 		03D25F991B4E428E005BC492 /* Utils.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Utils.h; sourceTree = "<group>"; };
 		03D25F9A1B4E428E005BC492 /* Utils.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Utils.m; sourceTree = "<group>"; };
 		03D25F9B1B4E428E005BC492 /* UtilsTests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UtilsTests.m; sourceTree = "<group>"; };
@@ -501,8 +497,6 @@
 			children = (
 				03D25F951B4E428E005BC492 /* ArtNumberToCapital.h */,
 				03D25F961B4E428E005BC492 /* ArtNumberToCapital.m */,
-				03D25F971B4E428E005BC492 /* NSData+Base64.h */,
-				03D25F981B4E428E005BC492 /* NSData+Base64.m */,
 				03D25F991B4E428E005BC492 /* Utils.h */,
 				03D25F9A1B4E428E005BC492 /* Utils.m */,
 				03D25F9B1B4E428E005BC492 /* UtilsTests.m */,
@@ -750,7 +744,6 @@
 				03D260571B4E428E005BC492 /* ArtSubmitViewCellButton.h in Headers */,
 				03D260451B4E428E005BC492 /* ArtFrameCellView.h in Headers */,
 				03D2605E1B4E428E005BC492 /* IServiceHttp.h in Headers */,
-				03D260181B4E428E005BC492 /* NSData+Base64.h in Headers */,
 				03D260641B4E428E005BC492 /* RemoteFactory.h in Headers */,
 				03D2607F1B4E428E005BC492 /* ArtLog.h in Headers */,
 				03D2605D1B4E428E005BC492 /* IService.h in Headers */,
@@ -876,7 +869,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0700;
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 1010;
 				ORGANIZATIONNAME = "刘洪彬";
 				TargetAttributes = {
 					0350446D1B54B0A400404194 = {
@@ -890,6 +883,7 @@
 					03D25F721B4E4220005BC492 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = U7764RLDB5;
+						LastSwiftMigration = 1010;
 					};
 					03D25F7D1B4E4220005BC492 = {
 						CreatedOnToolsVersion = 6.4;
@@ -966,7 +960,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "";
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n";
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -1022,7 +1016,6 @@
 				03D260321B4E428E005BC492 /* SqliteHelper.m in Sources */,
 				03D260561B4E428E005BC492 /* ArtSubmitViewCell.m in Sources */,
 				03D260341B4E428E005BC492 /* ArtAlert.m in Sources */,
-				03D260191B4E428E005BC492 /* NSData+Base64.m in Sources */,
 				03D2605F1B4E428E005BC492 /* IServiceHttp.m in Sources */,
 				03D2603E1B4E428E005BC492 /* ArtListControlPage.m in Sources */,
 				03D260611B4E428E005BC492 /* IServiceHttpSync.m in Sources */,
@@ -1113,6 +1106,7 @@
 				);
 				INFOPLIST_FILE = AOIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.artobj.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AOIOS/AOIOS-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1128,6 +1122,7 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = AOIOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.artobj.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "AOIOS/AOIOS-Bridging-Header.h";
 			};
@@ -1147,6 +1142,7 @@
 				);
 				INFOPLIST_FILE = AOIOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.artobj.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AOIOS.app/AOIOS";
 			};
@@ -1162,6 +1158,7 @@
 				);
 				INFOPLIST_FILE = AOIOSTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.artobj.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/AOIOS.app/AOIOS";
 			};
@@ -1171,19 +1168,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1191,6 +1197,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -1221,19 +1228,28 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -1254,6 +1270,7 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				ONLY_ACTIVE_ARCH = NO;
 				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VALID_ARCHS = "arm64 armv7 armv7s";
@@ -1265,9 +1282,9 @@
 		03D25F8A1B4E4220005BC492 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1276,8 +1293,11 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.artobj.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 4.2;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Debug;
@@ -1285,9 +1305,9 @@
 		03D25F8B1B4E4220005BC492 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ARCHS = "$(ARCHS_STANDARD)";
 				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = NO;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
@@ -1296,8 +1316,10 @@
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.artobj.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.2;
 				VALID_ARCHS = "arm64 armv7 armv7s";
 			};
 			name = Release;
@@ -1315,6 +1337,7 @@
 				);
 				INFOPLIST_FILE = AOCocoaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.artobj.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -1328,6 +1351,7 @@
 				);
 				INFOPLIST_FILE = AOCocoaTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "cn.artobj.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

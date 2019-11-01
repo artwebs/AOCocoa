@@ -19,4 +19,5 @@
 -(NSString *)sendParems: (NSMutableDictionary *)postParems;
 -(NSString *)sendPath:(NSString *)_path Parems: (NSMutableDictionary *)postParems;
 -(NSString *)sendPath:(NSString *)_path Parems: (NSMutableDictionary *)postParems imageDict:(NSMutableDictionary *) dicImages;
+-(NSString *)sendPath:(NSString *)_path Parems: (NSMutableDictionary *)postParems imageDict:(NSMutableDictionary *)dicImages Header:(NSMutableDictionary *)headerData Response: (NSHTTPURLResponse *) urlResponse;
 @end

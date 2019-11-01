@@ -73,8 +73,13 @@ static NSString *tag=@"IServiceHttpSync";
 
 -(NSString *)sendPath:(NSString *)_path Parems: (NSMutableDictionary *)postParems imageDict:(NSMutableDictionary *) dicImages
 {
-    NSString * res;
     
+    return [self sendPath:_path Parems:postParems imageDict:dicImages Header:nil Response:nil];
+}
+
+-(NSString *)sendPath:(NSString *)_path Parems: (NSMutableDictionary *)postParems imageDict:(NSMutableDictionary *)dicImages Header:(NSMutableDictionary *)headerData Response: (NSHTTPURLResponse *) urlResponse
+{
+    NSString * res;
     
     //分界线的标识符
     NSString *TWITTERFON_FORM_BOUNDARY = @"AaB03x";
@@ -161,6 +166,12 @@ static NSString *tag=@"IServiceHttpSync";
     [request setValue:content forHTTPHeaderField:@"Content-Type"];
     //[request setValue:@"keep-alive" forHTTPHeaderField:@"connection"];
     //[request setValue:@"UTF-8" forHTTPHeaderField:@"Charsert"];
+    if(headerData){
+        keys = [dicImages allKeys];
+        for(int i = 0; i< [keys count] ; i++){
+            [request setValue:[dicImages objectForKey:[keys objectAtIndex:i ]] forHTTPHeaderField:[keys objectAtIndex:i ]];
+        }
+    }
     //设置Content-Length
     [request setValue:[NSString stringWithFormat:@"%lu", (unsigned long)[myRequestData length]] forHTTPHeaderField:@"Content-Length"];
     //设置http body
@@ -172,35 +183,15 @@ static NSString *tag=@"IServiceHttpSync";
     //NSURLConnection *conn = [[NSURLConnection alloc] initWithRequest:request delegate:self];
     
     //设置接受response的data
-    NSHTTPURLResponse *urlResponese = nil;
     NSData *mResponseData;
     NSError *err = nil;
-    mResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponese error:&err];
+    mResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:&urlResponse error:&err];
     
     if(mResponseData == nil){
         NSLog(@"err code : %@", [err localizedDescription]);
     }
     res = [[NSString alloc] initWithData:mResponseData encoding:NSUTF8StringEncoding];
-    
-    if([urlResponese statusCode] >=200&&[urlResponese statusCode]<300){
-//        NSLog(@"返回结果=====%@",res);
-        return res;
-    }
-    /*
-     if (conn) {
-     mResponseData = [NSMutableData data];
-     mResponseData = [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:&err];
-     
-     if(mResponseData == nil){
-     NSLog(@"err code : %@", [err localizedDescription]);
-     }
-     res = [[NSString alloc] initWithData:mResponseData encoding:NSUTF8StringEncoding];
-     }else{
-     res = [[NSString alloc] init];
-     }*/
-//    NSLog(@"服务器返回：%@", res);
-    return nil;
-
+    return res;
 }
 
 
